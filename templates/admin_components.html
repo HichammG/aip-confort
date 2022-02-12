@@ -1,0 +1,282 @@
+{% extends "dashboard2.html" %}
+{% block adminContent %}
+
+
+
+			<div class="p-t-10"></div>
+
+			<!--Ajouter et supprimer une salle-->
+			<div class="wrap-login100">
+				<form class="login100-form form-add-room" onsubmit="return false">
+					<span class="login100-form-title">
+						Ajouter une salle
+					</span>
+
+					<div class="wrap-input100 validate-add-room" data-validate = "Un numéro de salle est requis : Sxxx">
+						<input class="signup100" type="text" id = "ADSSalle" name="salle" placeholder="Salle">
+					</div>
+					<div class="p-t-20"></div>
+					<p class="login100-form-text">
+						Température : &nbsp &nbsp &nbsp &nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADSTemperature">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Son : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADSSon">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Luminosité : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADSLuminosite">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						CO2 : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADSCO2">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Humidité : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADSHumidite">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+
+					<div class="container-login100-form-btn">
+						<button class="signup100-form-btn">
+							Ajouter
+						</button>
+					</div>
+					<div class="p-t-10"></div>
+					<div>
+						<p class="txt2" data-create = "Compte créé">
+						</p>
+					</div>
+					<div class="p-t-20"></div>
+
+
+				</form>
+				<form class="login100-form form-delete-room" onsubmit="return false">
+					<span class="login100-form-title">
+						Supprimer une salle
+					</span>
+
+					<div class="wrap-input100 validate-delete-room" id="DDSSalle" data-validate = "Un numéro de salle est requis : Sxxx">
+						<input class="signup100" type="text" name="salle" placeholder="Salle" id="salle">
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="signup100-form-btn">
+							Supprimer
+						</button>
+					</div>
+					<div class="p-t-10"></div>
+					<div>
+						<p class="txt2" data-create = "Salle ajoutée">
+						</p>
+					</div>
+				</form>
+			</div>
+
+			<div class="p-t-10"></div>
+			<!--Etat des capteurs-->
+			<div class="wrap-login100-center">
+				<form class="login100-form status-sensor" onsubmit="return false">
+					<span class="login100-form-title">
+						Etat des capteurs
+					</span>
+					<div class="container-login100-form-btn">
+						<button class="signup100-form-btn">
+							Afficher
+						</button>
+					</div>
+					<div class="p-t-20"></div>
+					<p id="sensor">Etat des capteurs ici</p>
+					<!--  TODO:this is for sensors state   -->
+					<div class="accordion p-t-30 text-center" id="EtatsCapteursDiv" style="width: 100%"></div>
+				</form>
+			</div>
+
+			<div class="p-t-10"></div>
+			<!--Ajouter et supprimer un capteur-->
+			<div class="wrap-login100-center">
+				<form class="login100-form form-add-sensor" onsubmit="return false">
+					<span class="login100-form-title">
+						Ajouter un raspberry
+					</span>
+
+					<div class="wrap-input100 validate-add-sensor" data-validate = "Un numéro de salle est requis : Sxxx">
+						<input class="signup100" type="text" id = "ajouterCapteurSalle" name="salle" placeholder="Salle">
+					</div>
+					<div class="p-t-20"></div>
+					<p class="login100-form-text">
+
+
+					<div class="wrap-input100 validate-add-sensor" data-validate = "Une addresse IPv4 est requise">
+						<input class="signup100" type="text" id = "ADRip" name="ip" placeholder="IP">
+					</div>
+					<div class="p-t-20"></div>
+					<p class="login100-form-text">
+						Température : &nbsp &nbsp &nbsp &nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADRTemperature">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Son : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADRSon">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Luminosité : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADRLuminosite">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						CO2 : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADRCO2">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Humidité : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="ADRHumidite">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+
+					<div class="container-login100-form-btn">
+						<button class="signup100-form-btn">
+							Ajouter
+						</button>
+					</div>
+					<div class="p-t-10"></div>
+					<div>
+						<p class="txt2" data-create = "Compte créé">
+						</p>
+					</div>
+					<div class="p-t-20"></div>
+
+
+				</form>
+				<form class="login100-form form-delete-sensor" onsubmit="return false">
+					<span class="login100-form-title">
+						Supprimer un raspberry
+					</span>
+
+					<div class="wrap-input100 validate-delete-sensor" id="DDRSalle" data-validate = "Une adresse IPv4 est requise">
+						<input class="signup100" type="text" name="ip" placeholder="IP">
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="signup100-form-btn">
+							Supprimer
+						</button>
+					</div>
+					<div class="p-t-10"></div>
+					<div>
+						<p class="txt2" data-create = "Salle ajoutée">
+						</p>
+					</div>
+				</form>
+			</div>
+
+			<div class="p-t-10"></div>
+			<!--Modifier l'état d'un capteur-->
+			<div class="wrap-login100-center">
+				<form class="login100-form form-modify-sensor" onsubmit="return false">
+					<span class="login100-form-title">
+						Modifier un capteur
+					</span>
+
+					<div class="wrap-input100 validate-modify-sensor" data-validate = "Une addresse IPv4 est requise">
+						<input class="signup100" type="text" id = "ADRip" name="ip" placeholder="IP">
+					</div>
+					<div class="p-t-20"></div>
+					<p class="login100-form-text">
+						Température : &nbsp &nbsp &nbsp &nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="MDRTemperature">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Son : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="MDRSon">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Luminosité : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="MDRLuminosite">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						CO2 : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="MDRCO2">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+					<p class="login100-form-text">
+						Humidité : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+						<label class="switch">
+						  <input type="checkbox" checked id="MDRHumidite">
+						  <span class="slider round"></span>
+						</label>
+					</p>
+
+					<div class="container-login100-form-btn">
+						<button class="signup100-form-btn">
+							Modifier
+						</button>
+					</div>
+					<div class="p-t-10"></div>
+					<div>
+						<p class="txt2" data-create = "Modifié">
+						</p>
+					</div>
+					<div class="p-t-20"></div>
+
+
+				</form>
+			</div>
+		</div>
+
+
+{% endblock %}

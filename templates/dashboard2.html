@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<input type="hidden" id="token" value="{{session['token']}}">
+<div class="p-t-60"></div>
+<div class="limiter">
+    <div class="container-login100">
+
+        <div class="p-t-10"></div>
+        <!--Confort personnalisé-->
+        <div class="wrap-login100-center">
+            <form style="width: 100%" class="login100-form form-perso" onsubmit="return false">
+
+					<div><span class="login100-form-title">
+						Confort
+					</span></div>
+
+                <p class="login100-form-text">
+                    Personnaliser : &nbsp &nbsp &nbsp &nbsp
+
+                    <label class="switch">
+                        <input type="checkbox" checked id="Personnaliser">
+                        <span class="slider round"></span>
+                    </label>
+                </p>
+                <div class=" p-t-20">
+                </div>
+                <p class="login100-form-text">
+                    Veuillez choisir les paramètres que vous voulez prendre en compte :
+                </p>
+
+                <div class=" p-t-20">
+                </div>
+
+
+                <p class="login100-form-text">
+                    Température : &nbsp &nbsp &nbsp &nbsp
+
+                    <label class="switch">
+                        <input type="checkbox" checked id="Temperature">
+                        <span class="slider round" id="TemperatureSlider"></span>
+                    </label>
+                </p>
+                <p class="login100-form-text">
+                    Son : &nbsp &nbsp &nbsp
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                    <label class="switch">
+                        <input type="checkbox" checked id="Son">
+                        <span class="slider round" id="SonSlider"></span>
+                    </label>
+                </p>
+                <p class="login100-form-text">
+                    Luminosité : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                    <label class="switch">
+                        <input type="checkbox" checked id="Luminosite">
+                        <span class="slider round" id="LuminositeSlider"></span>
+                    </label>
+                </p>
+                <p class="login100-form-text">
+                    CO2 : &nbsp &nbsp &nbsp
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                    <label class="switch">
+                        <input type="checkbox" checked id="CO2">
+                        <span class="slider round" id="CO2Slider"></span>
+                    </label>
+                </p>
+                <p class="login100-form-text">
+                    Humidité : &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                    <label class="switch">
+                        <input type="checkbox" checked id="Humidite">
+                        <span class="slider round" id="HumiditeSlider"></span>
+                    </label>
+                </p>
+                <div class="container-login100-form-btn">
+                    <button class="signup100-form-btn">
+                        Calculer
+                    </button>
+                </div>
+            </form>
+
+            <div class="p-20"></div>
+
+            <p class="p-t-30 p-b-30" style="width: 100%;text-align:center;">Données Classement accordion ici</p>
+            <!--Pour le resultat du classement -->
+
+            <div class="accordion p-t-30 text-center" id="DonneesClassementDiv" style="width: 100%"></div>
+        </div>
+
+        <!-- TODO: Start admin components -->
+
+        <!-- Import admin panel here -->
+        {% block adminContent %}
+        {# Template inserted here #}
+        {% endblock %}
+
+        <!-- TODO: End admin components -->
+
+</div>
+{% endblock %}

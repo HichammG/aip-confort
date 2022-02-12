@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
+	<div class="limiter">
+		<div class="p-t-75"></div>
+		<div class="container-login100">
+			<div class="wrap-login100-v2">
+
+				<span class="login100-form-title">
+					Bienvenue sur le site du projet AIP Confort
+				</span>
+
+				<section class="js-section">
+					<h2 class="Architecture" id="Architecture">AIP Confort Architecture</h2>
+
+					<div class="p-t-20"></div>
+					<p>L'architecture du système AIP Confort qui est déployée dans l'AIP de l'université des Sciences et technologies de Villers-lès-nancy est détaillée dans la Figure ci-dessous. Cela consiste à :</p>
+					<figure id="Figure1">
+					  <img src="../static/romain/images/AIPConfort.PNG" alt="AIPConfort_archi" width="100%">
+					  <figcaption>Figure 1: Aperçu des principaux constituants du système AIP Confort</figcaption>
+					</figure>
+
+					<p>Un ensemble d'API REST est publié par le projet pour accéder à la fois aux données qui ont été surveillées au fil du temps dans un ou plusieurs de ces pilotes, ainsi qu'aux commandes de contrôle résultant de l'algorithme AIP Confort conçu.</p>
+					<p>Il est possible d'accéder à cet API en cliquant sur le bouton suivant :<br/>&nbsp</p>
+					<a href="http://localhost:8000">API</a>
+
+					<p style="color:red;"><br/>Pour l'API, il est necéssaire de connaître votre "token" visible après votre connexion au site</p>
+					<p><br/>Pour continuer à naviguer sur ce site, vous êtes invité à vous connecter ou vous créer un compte en cliquant sur le bouton ci-dessous :<br/> &nbsp</p>
+					<a href="/user/">Se connecter</a>
+				  </section>
+
+			</div>
+			<div class="p-t-10"></div>
+			<div class="wrap-login100">
+				<h2>Nous contacter : </h2>
+				<table>
+					<tr>
+						<td>Ingénierie système</td>
+						<td>RESENDE Thomas <br/>MEDANI Saïd</td>
+					</tr>
+					<tr>
+						<td>Collecte des données</td>
+						<td>WENDLING Arthur</td>
+					</tr>
+					<tr>
+						<td>Méthode de classement des salles</td>
+						<td>BIVERT Jonathan</td>
+					</tr>
+					<tr>
+						<td>Site internet</td>
+						<td>GARMATE Hicham</td>
+					</tr>
+					<tr>
+						<td>API</td>
+						<td>BOULANGE Romain</td>
+					</tr>
+				</table>
+
+
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+{% endblock %}
