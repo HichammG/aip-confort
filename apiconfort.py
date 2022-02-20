@@ -11,7 +11,7 @@ CORS(app)
 app.secret_key = b'2t#!\xfe\x96\xe1\xd9\xaa&\xe1\x15\xc2\x10\xad@'  # random secret key obtained using terminal
 
 # Database
-client = pymongo.MongoClient('mongodb://commetuveux:ouiouioui@ws-01.milebits.com', 27017)
+client = pymongo.MongoClient('mongodb://aip-confort.milebits.com:3002/')
 db = client.users
 
 
@@ -76,4 +76,4 @@ def signout():
 
 # flask running
 if __name__ == '__main__':
-    app.run(host='localhost', debug=True)
+    app.run(host='aip-confort.milebits.com', port=3000, debug=True, ssl_context=('cert.pem', 'key.pem'))
