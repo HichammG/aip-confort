@@ -23,7 +23,7 @@ CORS(app, resources={r"*": {"origins": "*"}})
 bcrypt = Bcrypt(app)
 secret = "***************"
 
-mongo = pymongo.MongoClient("mongodb://commetuveux:ouiouioui@ws-01.milebits.com:27017/")
+mongo = pymongo.MongoClient("mongodb://aip-confort.milebits.com:3002/")
 db = mongo['BaseConfort']  # py_api is the name of the db
 
 @app.after_request
@@ -937,4 +937,4 @@ def indexsupprimerSalle():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port='8000')
+    app.run(host='aip-confort.milebits.com', port=3001, debug=True, ssl_context=('cert.pem', 'key.pem'))
