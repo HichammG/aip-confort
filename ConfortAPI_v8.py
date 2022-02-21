@@ -765,7 +765,7 @@ def indexajouterCapteurs():
                                                                'Son': bool(data['Acoustique']),
                                                                'CO2': bool(data['CO2']),
                                                                'Luminosite': bool(data['Luminosite']),
-                                                               'Salle': bool(data['Salle']),
+                                                               'Salle': data['Salle'],
                                                                'Humidite': bool(data['Humidite'])}]})
                 if res:
                     message = "Capteurs modified"
