@@ -208,11 +208,18 @@
                     var CO2 = donnees['CO2'];
                     var note = donnees['Note'];
                     var lum = donnees['Luminosite'];
-
                     var content = "Salle {NOM}".replace('{NOM}', nom);
-                    var materiel = donnees['Materiel'];
-                    console.log(materiel);
-                    var div = '<div style="text-align: center;" class="card"><div style="text-align: center;" class="card-header" id="Salle_{ID}_Heading"><h2 class="mb-0 text-center" style="text-align: center; width: 100%;"><button style="text-align: center;" class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#Salle_{ID}_Body" aria-expanded="false" aria-controls="Salle_{ID}_Body">{content} à {Note}/10 <div id="salle_rater_{ID}"></div></button></h2></div><div id="Salle_{ID}_Body" class="collapse" aria-labelledby="Salle_{ID}_Heading" data-parent="#DonneesClassementDiv"><div class="card-body"><div><strong>Temperature:</strong><span>{TEMPERATURE} °C</span></div><div><strong>Acoustique:</strong><span>{Acoustique} dB</span></div><div><strong>Humidite:</strong><span>{Humidite} %</span></div><div><strong>Luminosité:</strong><span>{Lum} lux</span></div><div><strong>CO2:</strong><span>{CO2} ppm</span></div><div><strong>Cette salle dispose de :</strong><span>{materiel}</span></div></div></div></div>';
+                    //materiel
+                    var logi = donnees['Materiel']['Logiciels'];
+                    var logiciels = JSON.stringify(logi);
+                    var Nbplaces = donnees['Nombre de Places'];
+                    var Nbpc = donnees['Nombres de PC'];
+                    var Projecteur = donnees['Projecteur'] ? "oui" : "non"
+                    //logs
+                    window.log('khabaj');
+                    window.log(logiciels);
+                    window.log(logi);
+                    var div = '<div style="text-align: center;" class="card"><div style="text-align: center;" class="card-header" id="Salle_{ID}_Heading"><h2 class="mb-0 text-center" style="text-align: center; width: 100%;"><button style="text-align: center;" class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#Salle_{ID}_Body" aria-expanded="false" aria-controls="Salle_{ID}_Body">{content} à {Note}/10 <div id="salle_rater_{ID}"></div></button></h2></div><div id="Salle_{ID}_Body" class="collapse" aria-labelledby="Salle_{ID}_Heading" data-parent="#DonneesClassementDiv"><div class="card-body"><div><strong>Temperature:</strong><span>{TEMPERATURE} °C</span></div><div><strong>Acoustique:</strong><span>{Acoustique} dB</span></div><div><strong>Humidite:</strong><span>{Humidite} %</span></div><div><strong>Luminosité:</strong><span>{Lum} lux</span></div><div><strong>CO2:</strong><span>{CO2} ppm</span></div><div><strong>Cette salle dispose de :</strong><span></span></div><div><strong>Logiciels :</strong><span>{Logiciels}</span></div><div><strong>Nombre de places :</strong><span>{Nbplaces}</span></div><div><strong>Nombre de PCs :</strong><span>{Nbpc}</span></div><div><strong>Projecteur :</strong><span>{Projecteur}</span></div></div></div></div>';
                     div = div.replaceAll('{ID}', nom);
                     div = div.replaceAll('{content}', content);
                     div = div.replaceAll('{TEMPERATURE}', temp);
@@ -222,7 +229,11 @@
                     div = div.replaceAll('{Lum}', lum);
                     div = div.replaceAll('{Note}', '        ' + note);
                     items = items + div;
-                    div = div.replaceAll('{materiel}', materiel);
+                    div = div.replaceAll('{Logiciels}',logiciels );
+                    div = div.replaceAll('{Nbplaces}',Nbplaces );
+                    div = div.replaceAll('{Nbpc}',Nbpc );
+                    div = div.replaceAll('{Logiciels}',logiciels );
+                    div = div.replaceAll('{Projecteur}',logiciels );
                 });
                 $('#DonneesClassementDiv').html(items);
                 salles.forEach(function (salle, index) {
