@@ -204,7 +204,9 @@ def indexMADM():
         lastMADM = r['Time']
 
     data = request.get_json()
-
+    # Fix issue : data is empty with CORS in browser
+    if data is None:
+        data = request.form.to_dict()
     if isinstance(data, str):  # check if data is str
         data = json.loads(data)  # convert data to dict
     if time.time() - 60 < lastMADM:
@@ -384,7 +386,7 @@ def indexMADM():
                             if int(len(ValeursTemperature_SansNone)) > ValeurNulle[0]:
                                 if (int(len(ValeursTemperature_SansNone)) - ValeurNulle[0]) != 0:
                                     Temperature = sum(ValeursTemperature_SansNone) / (
-                                                int(len(ValeursTemperature_SansNone)) - ValeurNulle[0])
+                                            int(len(ValeursTemperature_SansNone)) - ValeurNulle[0])
                         if Temperature == None:
                             Temperature = 21
 
@@ -392,7 +394,7 @@ def indexMADM():
                             if int(len(ValeursAcoustique_SansNone)) > ValeurNulle[1]:
                                 if (int(len(ValeursAcoustique_SansNone)) - ValeurNulle[1]) != 0:
                                     Acoustique = sum(ValeursAcoustique_SansNone) / (
-                                                int(len(ValeursAcoustique_SansNone)) - ValeurNulle[1])
+                                            int(len(ValeursAcoustique_SansNone)) - ValeurNulle[1])
                         if Acoustique == None:
                             Acoustique = 0
 
@@ -400,7 +402,7 @@ def indexMADM():
                             if int(len(ValeursLuminosite_SansNone)) > ValeurNulle[2]:
                                 if (int(len(ValeursLuminosite_SansNone)) - ValeurNulle[2]) != 0:
                                     Luminosite = sum(ValeursLuminosite_SansNone) / (
-                                                int(len(ValeursLuminosite_SansNone)) - ValeurNulle[2])
+                                            int(len(ValeursLuminosite_SansNone)) - ValeurNulle[2])
 
                         if Luminosite == None:
                             Luminosite = 500
@@ -417,7 +419,7 @@ def indexMADM():
                             if int(len(ValeursLuminosite_SansNone)) > ValeurNulle[4]:
                                 if (int(len(ValeursHumidite_SansNone)) - ValeurNulle[4]) != 0:
                                     Humidite = sum(ValeursHumidite_SansNone) / (
-                                                int(len(ValeursHumidite_SansNone)) - ValeurNulle[4])
+                                            int(len(ValeursHumidite_SansNone)) - ValeurNulle[4])
 
                         if Humidite == None:
                             Humidite = 50
@@ -512,7 +514,7 @@ def indexMADM():
                         for r in db['Materiel_Salle'].find({salle[i]: {"$exists": True}}):
                             Materiel = r[salle[i]]
 
-                        if Materiel == None:
+                        if Materiel is None:
                             Materiel = []
 
                         sortRes.append(({salle[i]: {'Note': dummy,
@@ -530,7 +532,7 @@ def indexMADM():
                         Note = 0
                         for r in db['Materiel_Salle'].find({salle[i]: {"$exists": True}}):
                             Materiel = r[salle[i]]
-                        if Materiel == None:
+                        if Materiel is None:
                             Materiel = []
                         sortRes.append(({salle[i]: {'Note': Note, 'Informations Problemes': "Any value",
                                                     'Materiel': Materiel}}, Note))
@@ -593,7 +595,7 @@ def indexCapteurs():
         except Exception as ee:
             res = {"error": str(ee)}
     else:
-        if token != None:
+        if token is not None:
             message = "wrong token"
             status = 'fail'
             code = 401
@@ -715,7 +717,7 @@ def indexmodifierCapteurs():
     status = "fail"
     message = ""
     User = db.users.find_one({'token': token, 'administrator': True}, {'_id': 0});
-    if User != None:
+    if User is not None:
         try:
             res = db['Capteurs'].update_one({data['Salle']: {"$exists": True}},
                                             {"$set": {data['Salle']: [{'Temperature': bool(data['Temperature']),
@@ -734,7 +736,7 @@ def indexmodifierCapteurs():
         except Exception as ee:
             res = {"error": str(ee)}
     else:
-        if token != None:
+        if token is not None:
             message = "wrong token"
             status = 'fail'
             code = 401
