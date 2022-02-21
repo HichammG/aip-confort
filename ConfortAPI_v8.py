@@ -702,9 +702,12 @@ def indexmodifierCapteurs():
     token = request.args.get('token')
     salle = request.args.get('salle')
     data = request.get_json()
-    if isinstance(data, str):  # check if data is str
-        data = json.loads(data)  # convert data to dict
-    code = 500
+    # Fix issue : data is empty with CORS in browser
+    if data is None:
+        data = request.form.to_dict()
+
+
+code = 500
     status = "fail"
     message = ""
     User = db.users.find_one({'token': token,'administrator': True}, {'_id': 0});
@@ -742,6 +745,10 @@ def indexajouterCapteurs():
     res = []
     token = request.args.get('token')
     data = request.get_json()
+    # Fix issue : data is empty with CORS in browser
+    if data is None:
+        data = request.form.to_dict()
+
     if isinstance(data, str):  # check if data is str
         data = json.loads(data)  # convert data to dict
     ip = str(data['ip']).replace('.','_')
@@ -849,9 +856,12 @@ def indexsupprimerCapteurs():
     res = []
     token = request.args.get('token')
     data = request.get_json()
-    if isinstance(data, str):  # check if data is str
-        data = json.loads(data)  # convert data to dict
-    ip = str(data['ip']).replace('.','_')
+    # Fix issue : data is empty with CORS in browser
+    if data is None:
+        data = request.form.to_dict()
+
+
+ip = str(data['ip']).replace('.','_')
     code = 500
     status = "fail"
     message = ""
@@ -897,6 +907,10 @@ def indexsupprimerSalle():
     res = []
     token = request.args.get('token')
     data = request.get_json()
+    # Fix issue : data is empty with CORS in browser
+    if data is None:
+        data = request.form.to_dict()
+
     if isinstance(data, str):  # check if data is str
         data = json.loads(data)  # convert data to dict
     Salle = data['Salle']
