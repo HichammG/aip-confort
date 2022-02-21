@@ -42,8 +42,9 @@
     if (logged) {
         buttonContainer.html('<a href="#" id="LogoutButton">Déconnexion</a>');
         //pour ne pas aller sur la page user
-        if ("https://aip-confort.milebits.com:3000/user/" in window.location.href)
-            window.location.href="https://aip-confort.milebits.com:3000/dashboard/"
+        if ("https://aip-confort.milebits.com:3000/user/" in window.location.href) {
+            window.location.href = "https://aip-confort.milebits.com:3000/dashboard/"
+        }
         $("#LogoutButton").click(logout);
         $('#UsernameHolder').html(JSON.parse(window.localStorage.getItem("user")).username);
         $('#tokenCopier').click(function () {
