@@ -489,6 +489,8 @@
         var CO2 = document.getElementById("ADSCO2").checked;
         var Humidite = document.getElementById("ADSHumidite").checked;
 
+        console.log("c'est le resultat:");
+        console.log(Salle);
         var url = "https://aip-confort.milebits.com:3001/ajouterSalle?token={token}";
         var data = {
             "Salle":Salle,
@@ -498,7 +500,6 @@
             "CO2":CO2,
             "Humidite":Humidite
                     };
-        console.log(Salle);
         console.log(data);
         var token = $('#token').val();
         console.log(token);
