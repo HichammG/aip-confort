@@ -25,15 +25,35 @@
 <body>
 <header class="Header">
     <div class="logo">AIP Confort</div>
-    <ul>
-        <li><a href="https://aip-confort.milebits.com:3001">API</a></li>
-        <li><a href="https://aip-confort.milebits.com/aip-confort/" target="_blank">Documentation API</a></li>
-    </ul>
-    <button class="buttn" type="button" id="tokenCopier">Cliquer pour copier votre token</button>
-    <div class="loginButtonContainer"></div>
-    <div class="Username" id="UsernameHolder">
-        Username
+    <div class="grid">
+        <div class="row row-col-3 justify-content-center">
+            <div class="col">
+                <a href="https://aip-confort.milebits.com:3001">API</a>
+            </div>
+            <div class="col"><a href="https://aip-confort.milebits.com/aip-confort/" target="_blank">Documentation
+                API</a></div>
+            <div class="col">
+                <button class="buttn" type="button" id="tokenCopier">Cliquer pour copier votre token</button>
+            </div>
+            <div class="col">
+                <div class="loginButtonContainer"></div>
+            </div>
+            <div class="col">
+                <div class="Username" id="UsernameHolder">
+                    Username
+                </div>
+            </div>
+        </div>
     </div>
+<!--    <ul>-->
+<!--        <li><a href="https://aip-confort.milebits.com:3001">API</a></li>-->
+<!--        <li><a href="https://aip-confort.milebits.com/aip-confort/" target="_blank">Documentation API</a></li>-->
+<!--    </ul>-->
+<!--    <button class="buttn" type="button" id="tokenCopier">Cliquer pour copier votre token</button>-->
+<!--    <div class="loginButtonContainer"></div>-->
+<!--    <div class="Username" id="UsernameHolder">-->
+<!--        Username-->
+<!--    </div>-->
 </header>
 
 
@@ -53,9 +73,9 @@
 <!--===============================================================================================-->
 <script src="../static/romain/vendor/tilt/tilt.jquery.min.js"></script>
 <script>
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
 
 </script>
 <!--===============================================================================================-->
