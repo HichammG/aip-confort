@@ -40,7 +40,7 @@
     var logged = window.localStorage.getItem("token") != null;
     var buttonContainer = $('.loginButtonContainer');
     if (logged) {
-        buttonContainer.html('<a href="#" id="LogoutButton">Déconnexion</a>');
+        buttonContainer.html('<a class="btn btn-sm" href="#" id="LogoutButton">Déconnexion</a>');
         //pour ne pas aller sur la page user
         if ("https://aip-confort.milebits.com:3000/user/" === window.location.href) {
             window.location.href = "https://aip-confort.milebits.com:3000/dashboard/"
@@ -52,7 +52,7 @@
             alert("Votre token est copié, :)");
         });
     } else {
-        buttonContainer.html('<a href="/user/">Se connecter</a>');
+        buttonContainer.html('<a class="btn btn-sm"  href="/user/">Se connecter</a>');
     }
 
     /*==================================================================
