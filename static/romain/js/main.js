@@ -581,8 +581,27 @@
         //    var salle = document.getElementById("ajouterCapteurSalle").value;
         //    var ip = document.getElementById("ADRip").value;
         //    var
+        var salle = document.getElementById('ajouterCapteurSalle').value;
+        var ip = document.getElementById('ADRip').value;
+        var Temperature = document.getElementById("ADRTemperature").checked;
+        var Son = document.getElementById("ADRSon").checked;
+        var Luminosite = document.getElementById("ADRLuminosite").checked;
+        var CO2 = document.getElementById("ADRCO2").checked;
+        var Humidite = document.getElementById("ADRHumidite").checked;
 
+        var data = {"Salle": salle, "ip": ip, "Temperature": Temperature, "Son": Son, "Luminosite": Luminosite, "CO2": CO2, "Humidite": Humidite};
+        var token = window.localStorage.getItem('token');
         // Ajouter ajouter capteur ici
+
+        $.ajax({
+            url: "https://aip-confort.milebits.com:3001/ajouterCapteurs?token={token}".replaceAll('{token}', token),
+            type: "POST",
+            dataType: "json",
+            crossDomain: true,
+            data: data,
+            success: () => alert("Le capteur a bien été rajouté"),
+            error: () => alert("Une erreur s'est produite !")
+        });
         }
 
         return check;
@@ -640,9 +659,19 @@
             }
             else{
             // Récupérer données
-
+            var input = $('#supprimer_raspberry_ip');
+            var ipaddress = input.val();
+            var token = window.localStorage.getItem('token');
             // Ajouter supprimer capteur ici
-
+            $.ajax({
+                url: "https://aip-confort.milebits.com:3001/supprimerCapteurs?token={token}".replaceAll('{token}', token),
+                type: "POST",
+                data: {"ip": ipaddress},
+                dataType: "json",
+                crossDomain: true,
+                success: () => alert("Capteur supprimé"),
+                error: () => alert("Une erreur s'est produite !")
+            });
             }
         }
 
@@ -694,7 +723,7 @@
             }
             else{
             // Récupérer données
-            // Ajouter supprimer capteur ici
+            // Ajouter modifier capteur ici
             }
         }
 
