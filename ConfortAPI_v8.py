@@ -702,9 +702,7 @@ def indexmodifierCapteurs():
     # Fix issue : data is empty with CORS in browser
     if data is None:
         data = request.form.to_dict()
-
-
-code = 500
+    code = 500
     status = "fail"
     message = ""
     User = db.users.find_one({'token': token,'administrator': True}, {'_id': 0});
@@ -856,9 +854,7 @@ def indexsupprimerCapteurs():
     # Fix issue : data is empty with CORS in browser
     if data is None:
         data = request.form.to_dict()
-
-
-ip = str(data['ip']).replace('.','_')
+    ip = str(data['ip']).replace('.','_')
     code = 500
     status = "fail"
     message = ""
