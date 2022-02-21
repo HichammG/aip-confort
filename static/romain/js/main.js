@@ -81,6 +81,7 @@
                         window.location.href = "/dashboard";
                     },
                     error: function (resp) {
+                        alert("Une erreur s'est produite")
                         console.log(resp);
                     }
                 });
