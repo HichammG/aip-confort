@@ -498,6 +498,7 @@
             "CO2":CO2,
             "Humidite":Humidite
                     };
+        console.log(Salle);
         console.log(data);
         var token = $('#token').val();
         console.log(token);
