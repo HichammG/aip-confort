@@ -329,35 +329,35 @@ def indexMADM():
                                 FraicheurValeurs = r['Time']
                                 FraicheurValeurs = datetime.fromtimestamp(FraicheurValeurs / 1e3)
 
-                                if (StatutTemperature == True and EtatCapteurs[j][0] == True and 'temperature' in r[
-                                    'capteur temperature']):
+                                #TODO: ce que romain à demander
+                                if (StatutTemperature == True and EtatCapteurs[j][0] == True and 'temperature' in r['capteur temperature'] and r['capteur temperature']['temperature']['temperature'] !="off"):
                                     ValeursTemperature.append(r['capteur temperature']['temperature']['temperature'])
                                 else:
                                     ValeursTemperature.append(None)
                                     ValeurNulle[0] = ValeurNulle[0] + 1
 
                                 if (StatutAcoustique == True and EtatCapteurs[j][1] == True and 'bruit' in r[
-                                    'capteur bruit']):
+                                    'capteur bruit'] and r['capteur bruit']['bruit']['bruit'] != "off"):
                                     ValeursAcoustique.append(r['capteur bruit']['bruit']['bruit'])
                                 else:
                                     ValeursAcoustique.append(None)
                                     ValeurNulle[1] = ValeurNulle[1] + 1
 
                                 if (StatutLuminosite == True and EtatCapteurs[j][2] == True and 'luminosite' in r[
-                                    'capteur luminosite']):
+                                    'capteur luminosite'] and r['capteur luminosite']['luminosite']['luminosite'] != "off"):
                                     ValeursLuminosite.append(r['capteur luminosite']['luminosite']['luminosite'])
                                 else:
                                     ValeursLuminosite.append(None)
                                     ValeurNulle[2] = ValeurNulle[2] + 1
 
-                                if (StatutCO2 == True and EtatCapteurs[j][3] == True and 'co2' in r['capteur co2']):
+                                if (StatutCO2 == True and EtatCapteurs[j][3] == True and 'co2' in r['capteur co2'] and r['capteur co2']['co2']['co2'] !="off"):
                                     ValeursCO2.append(r['capteur co2']['co2']['co2'])
                                 else:
                                     ValeursCO2.append(None)
                                     ValeurNulle[3] = ValeurNulle[3] + 1
 
                                 if (StatutHumidite == True and EtatCapteurs[j][4] == True and 'humidite' in r[
-                                    'capteur humidite']):
+                                    'capteur humidite'] and r['capteur humidite']['humidite']['humidite'] != "off"):
                                     ValeursHumidite.append(r['capteur humidite']['humidite']['humidite'])
                                 else:
                                     ValeursHumidite.append(None)
