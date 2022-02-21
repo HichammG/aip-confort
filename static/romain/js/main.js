@@ -187,7 +187,7 @@
         console.log(token);
         //Ajouter appelle MDAP ici
         $.ajax({
-            url: "http://127.0.0.1:8000/MADM?token={token}".replace('{token}', token),
+            url: "https://aip-confort.milebits.com:3001/MADM?token={token}".replace('{token}', token),
             type: "POST",
             data: params,
             crossDomain: true,
@@ -470,7 +470,7 @@
 
     
     function RedirectionJavascript(){
-        document.location.href="http://127.0.0.1:8000";
+        document.location.href="https://aip-confort.milebits.com:3001";
     }
 
     function submitbtn(){
@@ -523,7 +523,7 @@
         console.log(token);
         // Appel API
         $.ajax({
-            url:"http://127.0.0.1:8000/Capteurs?token={token}".replace('{token}',token),
+            url:"https://aip-confort.milebits.com:3001/Capteurs?token={token}".replace('{token}',token),
             type:"GET",
             crossDomain: true,
             success: function (resp){
