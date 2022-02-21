@@ -789,7 +789,7 @@ def indexajouterCapteurs():
     return jsonify({"status": status, 'data': "Done", "message": message}), code
 
 @app.route('/ajouterSalle', methods=['POST'])
-#@cross_origin('*')
+@cross_origin('*')
 def indexajouterSalle():
     res = []
     token = request.args.get('token')
