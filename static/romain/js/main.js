@@ -279,7 +279,7 @@
                 }
 
                     var token=$('#token').val();
-                    var url ="http://aip-confort.milebits.com:3001/supprimerSalle?token={token}".replace('{token}',token);
+                    var url ="https://aip-confort.milebits.com:3001/supprimerSalle?token={token}".replace('{token}',token);
                     $.ajax({
                         url: url,
                         type: "POST",
@@ -489,7 +489,7 @@
         var CO2 = document.getElementById("ADSCO2").checked;
         var Humidite = document.getElementById("ADSHumidite").checked;
 
-        var url = "http://aip-confort.milebits.com:3001/ajouterSalle?token={token}";
+        var url = "https://aip-confort.milebits.com:3001/ajouterSalle?token={token}";
         var data = {
             "Salle":Salle,
             "Temperature":Temperature,
@@ -503,7 +503,7 @@
         console.log(token);
 
         $.ajax({
-            url : "http://aip-confort.milebits.com:3001/ajouterSalle?token={token}".replace('{token}', token),
+            url : "https://aip-confort.milebits.com:3001/ajouterSalle?token={token}".replace('{token}', token),
             type: "POST",
             dataType: "json",
             data: data,
