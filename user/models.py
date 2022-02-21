@@ -20,7 +20,7 @@ class User:
         else:
             user = json.dumps(user)
             url = "https://aip-confort.milebits.com:3001/signup"
-            resp = requests.post(url, json=user)
+            resp = requests.post(url, json=user, verify=False)
             message = resp.json()['message']
         if resp.json()['status'] == "successful":
             print("success")
@@ -37,7 +37,7 @@ class login_user:
         }
         user = json.dumps(user_login)
         url = "https://aip-confort.milebits.com:3001/login"
-        resp = requests.post(url, json=user_login)
+        resp = requests.post(url, json=user_login, verify=False)
         message = resp.json()['message']
         token = resp.json()['data']['user']['token']
         user = resp.json()['data']['user']
