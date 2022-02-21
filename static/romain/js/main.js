@@ -211,7 +211,7 @@
                     div = div.replaceAll('{content}', content);
                     div = div.replaceAll('{TEMPERATURE}', temp);
                     div = div.replaceAll('{Acoustique}', acoustic);
-                    div = div.replaceAll('{Humidite}', Humidite);
+                    div = div.replaceAll('{Humidite}', humidity);
                     div = div.replaceAll('{CO2}', CO2);
                     div = div.replaceAll('{Lum}', lum);
                     div = div.replaceAll('{Note}', '        ' + note);
