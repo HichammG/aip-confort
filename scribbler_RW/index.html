@@ -1,132 +1,137 @@
 <!doctype html>
 
 <style>
-  a:link {
-    color: #0066CC; 
-    background-color: transparent; 
-    text-decoration: none;
-  }
+    a:link {
+        color: #0066CC;
+        background-color: transparent;
+        text-decoration: none;
+    }
 
-  a:visited {
-    color: #0066CC;
-    background-color: transparent;
-    text-decoration: none;
-  }
+    a:visited {
+        color: #0066CC;
+        background-color: transparent;
+        text-decoration: none;
+    }
 
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
+    a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+    }
 
-  a:active {
-    color: #B266FF;
-    background-color: transparent;
-    text-decoration: underline;
-  }
+    a:active {
+        color: #B266FF;
+        background-color: transparent;
+        text-decoration: underline;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-figcaption {
-    text-align:center;
-}
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-.marge {
-margin-left: 1em;
-}
+    figcaption {
+        text-align: center;
+    }
 
-.marge2 {
-margin-left: 2em;
-}
+    .marge {
+        margin-left: 1em;
+    }
 
-.marge3 {
-margin-left: 3em;
-}
+    .marge2 {
+        margin-left: 2em;
+    }
+
+    .marge3 {
+        margin-left: 3em;
+    }
 
 </style>
 
 
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AIP Confort's REST APIs</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-  <link rel="stylesheet" href="scribbler-global.css">
-  <link rel="stylesheet" href="scribbler-doc.css">
-  <link rel="author" href="humans.txt">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AIP Confort's REST APIs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="scribbler-global.css">
+    <link rel="stylesheet" href="scribbler-doc.css">
+    <link rel="author" href="humans.txt">
 </head>
 <body>
-  <div class="doc__bg"></div>
-  <nav class="header">
+<div class="doc__bg"></div>
+<nav class="header">
     <h1 class="logo">REST API <span class="logo__thin"></span></h1>
     <!--<ul class="menu">
       <div class="menu__item toggle"><span></span></div>
       <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
       <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
     </ul>-->
-  </nav>
-  <div class="wrapper">
+</nav>
+<div class="wrapper">
     <aside class="doc__nav">
-      <ul>
-        <li class="js-btn selected">Architecture</li>
-        <li class="js-btn">Access Granting</li>
-        <li class="js-btn">POST SignUp</li>
-        <li class="js-btn">POST Login</li>
-        <li class="js-btn">GET Room Data</li>
-        <li class="js-btn">GET Room Last Data</li>
-        <li class="js-btn">GET Sensors Status</li>
-        <li class="js-btn">POST MADM</li>
-        <li class="js-btn">POST Add Raspberry</li>
-        <li class="js-btn">POST Delete Raspberry</li>
-        <li class="js-btn">POST Modify Sensors's Status</li>
-        <li class="js-btn">POST Add Room</li>
-        <li class="js-btn">POST Delete Room</li>
-        <!--<li class="js-btn">Issues</li>-->
-      </ul>
+        <ul>
+            <li class="js-btn selected">Architecture</li>
+            <li class="js-btn">Access Granting</li>
+            <li class="js-btn">POST SignUp</li>
+            <li class="js-btn">POST Login</li>
+            <li class="js-btn">GET Room Data</li>
+            <li class="js-btn">GET Room Last Data</li>
+            <li class="js-btn">GET Sensors Status</li>
+            <li class="js-btn">POST MADM</li>
+            <li class="js-btn">POST Add microcontrôleur</li>
+            <li class="js-btn">POST Delete microcontrôleur</li>
+            <li class="js-btn">POST Modify Sensors's Status</li>
+            <li class="js-btn">POST Add Room</li>
+            <li class="js-btn">POST Delete Room</li>
+            <!--<li class="js-btn">Issues</li>-->
+        </ul>
     </aside>
     <article class="doc__content">
-      <section class="js-section">
-        <h3 class="Architecture" id="Architecture">AIP Confort Architecture</h3>
-        <p>The AIP Confort system architecture deployed in the AIP of the  university of Sciences and Technologies of Villers-lès-Nancy is detailed in the below Figure. It consists of:</p>
+        <section class="js-section">
+            <h3 class="Architecture" id="Architecture">AIP Confort Architecture</h3>
+            <p>The AIP Confort system architecture deployed in the AIP of the university of Sciences and Technologies of
+                Villers-lès-Nancy is detailed in the below Figure. It consists of:</p>
 
-        <figure id="Figure1">
-          <img src="AIPConfort.PNG"
-          alt="AIPConfort_archi">
-          <figcaption>Figure 1: Overview of the main constituents of the AIP Confort architecture</figcaption>
-        </figure>
+            <figure id="Figure1">
+                <img src="AIPConfort.PNG"
+                     alt="AIPConfort_archi">
+                <figcaption>Figure 1: Overview of the main constituents of the AIP Confort architecture</figcaption>
+            </figure>
 
-        <p>A set of REST APIs are released by the project to access both data that has been monitored over time in one or more of these pilots, along with control commands that result from the designed AIP Confort algorithm</p>
-      </section>
+            <p>A set of REST APIs are released by the project to access both data that has been monitored over time in
+                one or more of these pilots, along with control commands that result from the designed AIP Confort
+                algorithm</p>
+        </section>
 
-      <!-- Acces Granting-->
-      <section class="js-section">
-        <h3 class="AccessGranting" id="AccessGranting">Access Granting</h3>
-        <p>To be authorized to use the AIP Confort REST APIs, you need to have an university email account that contain :
-          <ul>
-            <li>@univ-lorraine.fr </li>
-            <li>@admin.univ-lorraine.fr </li>
-          </ul>
-        </p>
-      </section>
+        <!-- Acces Granting-->
+        <section class="js-section">
+            <h3 class="AccessGranting" id="AccessGranting">Access Granting</h3>
+            <p>To be authorized to use the AIP Confort REST APIs, you need to have an university email account that
+                contain :
+            <ul>
+                <li>@univ-lorraine.fr</li>
+                <li>@admin.univ-lorraine.fr</li>
+            </ul>
+            </p>
+        </section>
 
-      <!-- SignUp -->
-      <section class="js-section">
-        <h3 class="POST Signup">POST Signup</h3>
-        <p> If you haven't an account, you need to create one with the following link : </p>
-        <div class="code__block code__block--notabs">
+        <!-- SignUp -->
+        <section class="js-section">
+            <h3 class="POST Signup">POST Signup</h3>
+            <p> If you haven't an account, you need to create one with the following link : </p>
+            <div class="code__block code__block--notabs">
           <pre class="code code--block">
             <code>
               https://aip-confort.milebits.com:3001/signup
             </code>
           </pre>
-        </div>
-         <p>Body of the request shall contain the following data : </p>
-        <pre class="code code--block">
+            </div>
+            <p>Body of the request shall contain the following data : </p>
+            <pre class="code code--block">
               <code>
                 {
                     "email" : xxx@univ-lorraine.fr
@@ -135,39 +140,39 @@ margin-left: 3em;
                 }
               </code>
             </pre>
-        <table id="Parameters_POSTSignUp">
-          <tr>
-            <th>Body Form</th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>email</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>User email from university</td>
-          </tr>
-          <tr>
-            <td>password</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>password that will be use to Login</td>
-          </tr>
-          <tr>
-            <td>username</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>Username that will be display in the website </td>
-          </tr>
-        </table>
-        <p>Possible response codes:</p>
-        <table id="responseCode">
-          <tr>
-            <th>Code</th>
-            <th>Payload (application/json)</th>
-            <th>Meaning</th>
-          </tr>
-          <tr>
-            <td>200</td>
-            <td>
-              <div class="code__block code__block--notabs">
+            <table id="Parameters_POSTSignUp">
+                <tr>
+                    <th>Body Form</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>User email from university</td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>password that will be use to Login</td>
+                </tr>
+                <tr>
+                    <td>username</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Username that will be display in the website</td>
+                </tr>
+            </table>
+            <p>Possible response codes:</p>
+            <table id="responseCode">
+                <tr>
+                    <th>Code</th>
+                    <th>Payload (application/json)</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>
+                        <div class="code__block code__block--notabs">
                 <pre class="code code--block">
                   <code>
                     {
@@ -176,53 +181,53 @@ margin-left: 3em;
                     }
                   </code>
                 </pre>
-              </div>
-            </td>
-            <td>Success</td>
-          </tr>
-          <tr>
-            <td>401</td>
-            <td>{
-                  "message": "user with that email exists",
-                  "status": "fail"
-                }
-            </td>
-            <td>Error: User already exist</td>
-          </tr>
-          <tr>
-            <td>401</td>
-            <td>{
-                  "message": "user denied",
-                  "status": "fail"
-                }
-            </td>
-            <td>Error: Wrong User email</td>
-          </tr>
-          <tr>
-            <td>500</td>
-            <td>{
-                  "message": "error",
-                  "status": "fail"
-                }
-            </td>
-            <td>Error: Database problem</td>
-          </tr>
-        </table>
-      </section>
+                        </div>
+                    </td>
+                    <td>Success</td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td>{
+                        "message": "user with that email exists",
+                        "status": "fail"
+                        }
+                    </td>
+                    <td>Error: User already exist</td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td>{
+                        "message": "user denied",
+                        "status": "fail"
+                        }
+                    </td>
+                    <td>Error: Wrong User email</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>{
+                        "message": "error",
+                        "status": "fail"
+                        }
+                    </td>
+                    <td>Error: Database problem</td>
+                </tr>
+            </table>
+        </section>
 
-      <!-- Login -->
-      <section class="js-section">
-        <h3 class="POST Login">POST Login</h3>
-        <p> If you have an account, you need to login with the following link : </p>
-        <div class="code__block code__block--notabs">
+        <!-- Login -->
+        <section class="js-section">
+            <h3 class="POST Login">POST Login</h3>
+            <p> If you have an account, you need to login with the following link : </p>
+            <div class="code__block code__block--notabs">
           <pre class="code code--block">
             <code>
               https://aip-confort.milebits.com:3001/login
             </code>
           </pre>
-        </div>
-        <p>Body of the request shall contain the following data : </p>
-        <pre class="code code--block">
+            </div>
+            <p>Body of the request shall contain the following data : </p>
+            <pre class="code code--block">
               <code>
                 {
                     "email" : xxx@univ-lorraine.fr
@@ -230,34 +235,34 @@ margin-left: 3em;
                 }
               </code>
             </pre>
-        <table id="Parameters_POSTLogin">
-          <tr>
-            <th>Body Form</th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>email</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>User email from university</td>
-          </tr>
-          <tr>
-            <td>password</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>password that will be use to Login</td>
-          </tr>
-        </table>
-        <p>Possible response codes:</p>
-        <table id="responseCode">
-          <tr>
-            <th>Code</th>
-            <th>Payload (application/json)</th>
-            <th>Meaning</th>
-          </tr>
-          <tr>
-            <td>200</td>
-            <td>
-              <div class="code__block code__block--notabs">
+            <table id="Parameters_POSTLogin">
+                <tr>
+                    <th>Body Form</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>User email from university</td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>password that will be use to Login</td>
+                </tr>
+            </table>
+            <p>Possible response codes:</p>
+            <table id="responseCode">
+                <tr>
+                    <th>Code</th>
+                    <th>Payload (application/json)</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>
+                        <div class="code__block code__block--notabs">
                 <pre class="code code--block">
                   <code>
                     {
@@ -279,135 +284,145 @@ margin-left: 3em;
                     }
                   </code>
                 </pre>
-              </div>
-            </td>
-            <td>Success</td>
-          </tr>
-          <tr>
-            <td>401</td>
-            <td>{
-                  "data": {},
-                  "message": "invalid login details",
-                  "status": "fail"
-                }
-            </td>
-            <td>Error: Wrong email or password</td>
-          </tr>
+                        </div>
+                    </td>
+                    <td>Success</td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td>{
+                        "data": {},
+                        "message": "invalid login details",
+                        "status": "fail"
+                        }
+                    </td>
+                    <td>Error: Wrong email or password</td>
+                </tr>
 
-          <tr>
-            <td>500</td>
-            <td>{
-                  "message": "error",
-                  "status": "fail"
-                }
-            </td>
-            <td>Error: Database problem</td>
-          </tr>
-        </table>
-        <p>The following table provides a description of the key/value items contained in the response of a successfull request (Code 200)</p>
-        <table id="keyMonitored">
-          <tr>
-            <th>Key</th>
-            <th>Description</th>
-            <th>Type</th>
-          </tr>
-          <tr>
-            <td>user</td>
-            <td>Contain user's data</td>
-            <td>array</td>
-          </tr>
-          <tr>
-            <td>_id</td>
-            <td>id in database</td>
-            <td>string</td>
-          </tr>
-          <tr>
-            <td>administrator</td>
-            <td>If the user is administrator</td>
-            <td>boolean</td>
-          </tr>
-          <tr>
-            <td>create</td>
-            <td>Date of creation
-            </td>
-            <td>string</td>
-          </tr>
-          <tr>
-            <td>email</td>
-            <td>email of the user
-            </td>
-            <td>string</td>
-          </tr>
-          <tr>
-            <td>token</td>
-           
-            <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-            </td>
-            <td>string</td>
-          </tr>
-          <tr>
-            <td>username</td>
-            <td>User's username
-            </td>
-            <td>string</td>
-          </tr>
-          <tr>
-            <td>message</td>
-            <td>Authentification message
-            </td>
-            <td>string</td>
-          </tr>
-          <tr>
-            <td>status</td>
-            <td>Authentification status
-            </td>
-            <td>string</td>
-          </tr>
-        </table>
-      </section>
+                <tr>
+                    <td>500</td>
+                    <td>{
+                        "message": "error",
+                        "status": "fail"
+                        }
+                    </td>
+                    <td>Error: Database problem</td>
+                </tr>
+            </table>
+            <p>The following table provides a description of the key/value items contained in the response of a
+                successfull request (Code 200)</p>
+            <table id="keyMonitored">
+                <tr>
+                    <th>Key</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>user</td>
+                    <td>Contain user's data</td>
+                    <td>array</td>
+                </tr>
+                <tr>
+                    <td>_id</td>
+                    <td>id in database</td>
+                    <td>string</td>
+                </tr>
+                <tr>
+                    <td>administrator</td>
+                    <td>If the user is administrator</td>
+                    <td>boolean</td>
+                </tr>
+                <tr>
+                    <td>create</td>
+                    <td>Date of creation
+                    </td>
+                    <td>string</td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td>email of the user
+                    </td>
+                    <td>string</td>
+                </tr>
+                <tr>
+                    <td>token</td>
 
-      <!-- GET Room -->
-      <section class="js-section">
-        <h3 class="section__title">GET Room Data</h3>
-        <p>Last 10th value in the database for a chosen room should be done using the following GET request:</p>
-        <div class="code__block code__block--notabs">
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                    </td>
+                    <td>string</td>
+                </tr>
+                <tr>
+                    <td>username</td>
+                    <td>User's username
+                    </td>
+                    <td>string</td>
+                </tr>
+                <tr>
+                    <td>message</td>
+                    <td>Authentification message
+                    </td>
+                    <td>string</td>
+                </tr>
+                <tr>
+                    <td>status</td>
+                    <td>Authentification status
+                    </td>
+                    <td>string</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- GET Room -->
+        <section class="js-section">
+            <h3 class="section__title">GET Room Data</h3>
+            <p>Last 10th value in the database for a chosen room should be done using the following GET request:</p>
+            <div class="code__block code__block--notabs">
           <pre class="code code--block">
             <code>
-              https://aip-confort.milebits.com:3001/salle?salle=<FONT COLOR="#ff7f00">{room}</FONT>&token=<FONT COLOR="#ff7f00">{token}</FONT>
+              https://aip-confort.milebits.com:3001/salle?salle=<FONT COLOR="#ff7f00">{room}</FONT>&token=<FONT
+                    COLOR="#ff7f00">{token}</FONT>
             </code>
           </pre>
-        </div>
-        <table id="Parameters_GetMonitoredData">
-          <tr>
-            <th>Parameters</th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>room</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>Room where you want data</td>
-          </tr>
-          <tr>
-            <td>token</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-          </tr>
-        </table>
+            </div>
+            <table id="Parameters_GetMonitoredData">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>room</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Room where you want data</td>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
 
-        <div class="code__block code__block--notabs">
+            <div class="code__block code__block--notabs">
 
-          </pre>
-          <p>Possible response codes:</p>
-          <table id="responseCode">
-            <tr>
-              <th>Code</th>
-              <th>Payload</th>
-              <th>Meaning</th>
-            </tr>
-            <tr>
-              <td>200</td>
-              <td>
+                </pre>
+                <p>Possible response codes:</p>
+                <table id="responseCode">
+                    <tr>
+                        <th>Code</th>
+                        <th>Payload</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>
                 <pre class="code code--block">
                   <code>
                     {data": [{
@@ -449,162 +464,168 @@ margin-left: 3em;
 
                   </code>
                 </pre>
-              </td>
-              <td>Success</td>
-            </tr>
-            <tr>
-              <td>204</td>
-              <td>{"message": "no value found"}</td>
-              <td>Success : Room don't exist</td>
-            </tr>
-            <tr>
-              <td>401</td>
-              <td>{"message": "wrong token"}</td>
-              <td>Error: Wrong token</td>
-            </tr>
-            <tr>
-              <td>401</td>
-              <td>{"message": "any token"}</td>
-              <td>Error: Token missing in URL</td>
-            </tr>
-          </table>
-          <p>The following table provides a description of the key/value items contained in the response of a successfull request (Code 200)</p>
-          <table id="keyMonitored_Command2">
-            <tr>
-              <th>Key</th>
-              <th>Description</th>
-              <th>Unit</th>
-            </tr>
-            <tr>
-              <td>Timestamp</td>
-              <td>Unix timestamp</td>
-              <td>sec</td>
-            </tr>
-            <tr>
-              <td>activation capteur bruit</td>
-              <td>Sensor state desired by the administrator</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>bruit</td>
-              <td>Contain sound value</td>
-              <td>dB</td>
-            </tr>
-            <tr>
-              <td>etat capteur bruit</td>
-              <td>Status of the sound sensor</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>activation capteur humidite</td>
-              <td>Sensor state desired by the administrator</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>humidite</td>
-              <td>Contain humidity value</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>etat capteur humidite</td>
-              <td>Status of the humidity sensor</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>activation capteur luminosite</td>
-              <td>Sensor state desired by the administrator</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>luminosite</td>
-              <td>Contain luminosity value</td>
-              <td>lux</td>
-            </tr>
-            <tr>
-              <td>etat capteur luminosite</td>
-              <td>Status of the luminosity sensor</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>activation capteur co2</td>
-              <td>Sensor state desired by the administrator</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>co2</td>
-              <td>Contain CO2 value</td>
-              <td>ppm</td>
-            </tr>
-            <tr>
-              <td>etat capteur co2</td>
-              <td>Status of the co2 sensor</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>activation capteur temperature</td>
-              <td>Sensor state desired by the administrator</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>temperature</td>
-              <td>Contain temperature value</td>
-              <td>°C</td>
-            </tr>
-            <tr>
-              <td>etat capteur temperature</td>
-              <td>Status of the temperature sensor</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>ip</td>
-              <td>IP Address of the Raspberry which collect those data</td>
-              <td>boolean</td>
-            </tr>
-          </table>
+                        </td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>204</td>
+                        <td>{"message": "no value found"}</td>
+                        <td>Success : Room don't exist</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "wrong token"}</td>
+                        <td>Error: Wrong token</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "any token"}</td>
+                        <td>Error: Token missing in URL</td>
+                    </tr>
+                </table>
+                <p>The following table provides a description of the key/value items contained in the response of a
+                    successfull request (Code 200)</p>
+                <table id="keyMonitored_Command2">
+                    <tr>
+                        <th>Key</th>
+                        <th>Description</th>
+                        <th>Unit</th>
+                    </tr>
+                    <tr>
+                        <td>Timestamp</td>
+                        <td>Unix timestamp</td>
+                        <td>sec</td>
+                    </tr>
+                    <tr>
+                        <td>activation capteur bruit</td>
+                        <td>Sensor state desired by the administrator</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>bruit</td>
+                        <td>Contain sound value</td>
+                        <td>dB</td>
+                    </tr>
+                    <tr>
+                        <td>etat capteur bruit</td>
+                        <td>Status of the sound sensor</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>activation capteur humidite</td>
+                        <td>Sensor state desired by the administrator</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>humidite</td>
+                        <td>Contain humidity value</td>
+                        <td>%</td>
+                    </tr>
+                    <tr>
+                        <td>etat capteur humidite</td>
+                        <td>Status of the humidity sensor</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>activation capteur luminosite</td>
+                        <td>Sensor state desired by the administrator</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>luminosite</td>
+                        <td>Contain luminosity value</td>
+                        <td>lux</td>
+                    </tr>
+                    <tr>
+                        <td>etat capteur luminosite</td>
+                        <td>Status of the luminosity sensor</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>activation capteur co2</td>
+                        <td>Sensor state desired by the administrator</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>co2</td>
+                        <td>Contain CO2 value</td>
+                        <td>ppm</td>
+                    </tr>
+                    <tr>
+                        <td>etat capteur co2</td>
+                        <td>Status of the co2 sensor</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>activation capteur temperature</td>
+                        <td>Sensor state desired by the administrator</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>temperature</td>
+                        <td>Contain temperature value</td>
+                        <td>°C</td>
+                    </tr>
+                    <tr>
+                        <td>etat capteur temperature</td>
+                        <td>Status of the temperature sensor</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr>
+                        <td>ip</td>
+                        <td>IP Address of the microcontrôleur which collect those data</td>
+                        <td>boolean</td>
+                    </tr>
+                </table>
         </section>
 
-      <!-- GET Room Last-->
-      <section class="js-section">
-        <h3 class="section__title">GET Room Last Data</h3>
-        <p>Last value in the database for a chosen room should be done using the following GET request:</p>
-        <div class="code__block code__block--notabs">
+        <!-- GET Room Last-->
+        <section class="js-section">
+            <h3 class="section__title">GET Room Last Data</h3>
+            <p>Last value in the database for a chosen room should be done using the following GET request:</p>
+            <div class="code__block code__block--notabs">
           <pre class="code code--block">
             <code>
-              https://aip-confort.milebits.com:3001/sallelast?salle=<FONT COLOR="#ff7f00">{room}</FONT>&token=<FONT COLOR="#ff7f00">{token}</FONT>
+              https://aip-confort.milebits.com:3001/sallelast?salle=<FONT COLOR="#ff7f00">{room}</FONT>&token=<FONT
+                    COLOR="#ff7f00">{token}</FONT>
             </code>
           </pre>
-        </div>
-        <table id="Parameters_GetMonitoredData">
-          <tr>
-            <th>Parameters</th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>room</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>Room where you want data</td>
-          </tr>
-          <tr>
-            <td>token</td>
-            <td><FONT COLOR="#A0A0A0">required</FONT></td>
-            <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-          </tr>
-        </table>
+            </div>
+            <table id="Parameters_GetMonitoredData">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>room</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Room where you want data</td>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
 
-        <div class="code__block code__block--notabs">
+            <div class="code__block code__block--notabs">
 
-          </pre>
-          <p>Possible response codes:</p>
-          <table id="responseCode">
-            <tr>
-              <th>Code</th>
-              <th>Payload</th>
-              <th>Meaning</th>
-            </tr>
-            <tr>
-              <td>200</td>
-              <td>
+                </pre>
+                <p>Possible response codes:</p>
+                <table id="responseCode">
+                    <tr>
+                        <th>Code</th>
+                        <th>Payload</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>
                 <pre class="code code--block">
                   <code>
                     {data": [{
@@ -646,62 +667,68 @@ margin-left: 3em;
 
                   </code>
                 </pre>
-              </td>
-              <td>Success</td>
-            </tr>
-            <tr>
-              <td>204</td>
-              <td>{"message": "no value found"}</td>
-              <td>Success : Room don't exist</td>
-            </tr>
-            <tr>
-              <td>401</td>
-              <td>{"message": "wrong token"}</td>
-              <td>Error: Wrong token</td>
-            </tr>
-            <tr>
-              <td>401</td>
-              <td>{"message": "any token"}</td>
-              <td>Error: Token missing in URL</td>
-            </tr>
-          </table>
-          <p>Body of the request shall contain the following data (see description of each key/value in the <a href="#keyMonitored_Command2">Table given in the "Get Room Data" section</a></p>
+                        </td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>204</td>
+                        <td>{"message": "no value found"}</td>
+                        <td>Success : Room don't exist</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "wrong token"}</td>
+                        <td>Error: Wrong token</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "any token"}</td>
+                        <td>Error: Token missing in URL</td>
+                    </tr>
+                </table>
+                <p>Body of the request shall contain the following data (see description of each key/value in the <a
+                        href="#keyMonitored_Command2">Table given in the "Get Room Data" section</a></p>
         </section>
 
-      <!-- GET Sensors Status-->
-      <section class="js-section">
-          <h3 class="GetCommands">Get Sensors Status</h3>
-          <p>If you are administrator you can get the status of all sensors and it should be done using the following GET request:</p>
-          <div class="code__block code__block--notabs">
+        <!-- GET Sensors Status-->
+        <section class="js-section">
+            <h3 class="GetCommands">Get Sensors Status</h3>
+            <p>If you are administrator you can get the status of all sensors and it should be done using the following
+                GET request:</p>
+            <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code>
                 https://aip-confort.milebits.com:3001/Capteurs?token=<FONT COLOR="#ff7f00">{token}</FONT>
               </code>
             </pre>
-          </div>
-          <table id="customers">
-            <tr>
-              <th>Parameters</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>token</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-            </tr>
-          </table>
-          <p>Possible response codes:</p>
-          <table id="responseCode">
-            <tr>
-              <th>Code</th>
-              <th>Payload (application/json)</th>
-              <th>Meaning</th>
-            </tr>
-            <tr>
-              <td>200</td>
-              <td>
-                <div class="code__block code__block--notabs">
+            </div>
+            <table id="customers">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
+            <p>Possible response codes:</p>
+            <table id="responseCode">
+                <tr>
+                    <th>Code</th>
+                    <th>Payload (application/json)</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>
+                        <div class="code__block code__block--notabs">
                   <pre class="code code--block">
                     <code>
                       {
@@ -728,80 +755,84 @@ margin-left: 3em;
                       <span class="marge"></span>}
                     </code>
                   </pre>
-                </div>
-              </td>
-              <td>Success : If array's name is of the form "Sxxx", it is the status of sensors desired by the administrator.
-              Else, if it's an IP address, it is the real status of the sensors on the Raspberry which have this IP adress</td>
-            </tr>
-            <tr>
-              <td>204</td>
-              <td>{"message": "no value found"}</td>
-              <td>Success : Any sensors in the Architecture</td>
-            </tr>
-            <td>401</td>
-              <td>{"message": "wrong token"}</td>
-              <td>Error: Wrong token</td>
-            </tr>
-            <tr>
-              <td>401</td>
-              <td>{"message": "any token"}</td>
-              <td>Error: Token missing in URL</td>
-            </tr>
-            <tr>
-              <td>500</td>
-              <td>{"message": An error}</td>
-              <td>Error: Problem with the database</td>
-            </tr>
-          </table>
+                        </div>
+                    </td>
+                    <td>Success : If array's name is of the form "Sxxx", it is the status of sensors desired by the
+                        administrator.
+                        Else, if it's an IP address, it is the real status of the sensors on the microcontrôleur which have
+                        this IP adress
+                    </td>
+                </tr>
+                <tr>
+                    <td>204</td>
+                    <td>{"message": "no value found"}</td>
+                    <td>Success : Any sensors in the Architecture</td>
+                </tr>
+                <td>401</td>
+                <td>{"message": "wrong token"}</td>
+                <td>Error: Wrong token</td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td>{"message": "any token"}</td>
+                    <td>Error: Token missing in URL</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>{"message": An error}</td>
+                    <td>Error: Problem with the database</td>
+                </tr>
+            </table>
 
-          <p>The following table provides a description of the key/value items contained in the response of a successfull request (Code 200)</p>
-          <table id="keyMonitored_Command">
-            <tr>
-              <th>Key</th>
-              <th>Description</th>
-              <th>Type</th>
-            </tr>
-            <tr>
-              <td>CO2</td>
-              <td>CO2 sensor status</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>Son</td>
-              <td>Sound sensor status</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>Humidite</td>
-              <td>Humidity sensor status</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>Luminosite</td>
-              <td>Luminosity sensor status</td>
-              <td>boolean</td>
-            </tr>
-            <tr>
-              <td>Temperature</td>
-              <td>Temperature sensor status</td>
-              <td>boolean</td>
-            </tr>
-          </table>
+            <p>The following table provides a description of the key/value items contained in the response of a
+                successfull request (Code 200)</p>
+            <table id="keyMonitored_Command">
+                <tr>
+                    <th>Key</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>CO2</td>
+                    <td>CO2 sensor status</td>
+                    <td>boolean</td>
+                </tr>
+                <tr>
+                    <td>Son</td>
+                    <td>Sound sensor status</td>
+                    <td>boolean</td>
+                </tr>
+                <tr>
+                    <td>Humidite</td>
+                    <td>Humidity sensor status</td>
+                    <td>boolean</td>
+                </tr>
+                <tr>
+                    <td>Luminosite</td>
+                    <td>Luminosity sensor status</td>
+                    <td>boolean</td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td>Temperature sensor status</td>
+                    <td>boolean</td>
+                </tr>
+            </table>
         </section>
 
-      <!-- GET MADM -->
-      <section class="js-section">
-          <h3 class="section__title">POST MADM</h3>
-          <p>Generate the marks of every room should be done using the following GET request:</p>
-          <div class="code__block code__block--notabs">
+        <!-- GET MADM -->
+        <section class="js-section">
+            <h3 class="section__title">POST MADM</h3>
+            <p>Generate the marks of every room should be done using the following GET request:</p>
+            <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code>
                 https://aip-confort.milebits.com:3001/MADM?token=<FONT COLOR="#ff7f00">{token}</FONT>
               </code>
             </pre>
-          </div>
-          <p>Body of the request shall contain the following data : </p>
-        <pre class="code code--block">
+            </div>
+            <p>Body of the request shall contain the following data : </p>
+            <pre class="code code--block">
               <code>
                 {
                     "demandeTemperature":true,
@@ -812,62 +843,77 @@ margin-left: 3em;
                 }
               </code>
             </pre>
-          <table id="Parameters_PostCommands">
-            <tr>
-              <th>Body FORM</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td> demandeTemperature</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Boolean that indicates if you want to take into account the values of the temperature in the mark<t</td>
-            </tr>
-            <tr>
-              <td>demandeAcoustique</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Boolean that indicates if you want to take into account the values of the sound in the mark<t</td>
-            </tr>
-            <tr>
-              <td>demandeLuminosite</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Boolean that indicates if you want to take into account the values of the luminosity in the mark<t</td>
-            </tr>
-            <tr>
-              <td>demandeHumidite</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Boolean that indicates if you want to take into account the values of the humidity in the mark<t</td>
-            </tr>
-            <tr>
-              <td>demandeAcoustique</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Boolean that indicates if you want to take into account the values of the CO2 in the mark<t</td>
-            </tr>
-          </table>
-          <table id="Parameters_PostCommands">
-            <tr>
-              <th>Parameters</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>token</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-            </tr>
-          </table>
-          <div class="code__block code__block--notabs">
-            <p>Possible response codes:</p>
-            <table id="responseCode">
-              <tr>
-                <th>Code</th>
-                <th>Payload</th>
-                <th>Meaning</th>
-              </tr>
-              <tr>
-                <td>200</td>
-                <td>
-                  <div class="code__block code__block--notabs">
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Body FORM</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td> demandeTemperature</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Boolean that indicates if you want to take into account the values of the temperature in the
+                        mark
+                        <t
+                    </td>
+                </tr>
+                <tr>
+                    <td>demandeAcoustique</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Boolean that indicates if you want to take into account the values of the sound in the mark
+                        <t
+                    </td>
+                </tr>
+                <tr>
+                    <td>demandeLuminosite</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Boolean that indicates if you want to take into account the values of the luminosity in the mark
+                        <t
+                    </td>
+                </tr>
+                <tr>
+                    <td>demandeHumidite</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Boolean that indicates if you want to take into account the values of the humidity in the mark
+                        <t
+                    </td>
+                </tr>
+                <tr>
+                    <td>demandeAcoustique</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Boolean that indicates if you want to take into account the values of the CO2 in the mark
+                        <t
+                    </td>
+                </tr>
+            </table>
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
+            <div class="code__block code__block--notabs">
+                <p>Possible response codes:</p>
+                <table id="responseCode">
+                    <tr>
+                        <th>Code</th>
+                        <th>Payload</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>
+                            <div class="code__block code__block--notabs">
                     <pre class="code code--block">
                       <code>{
                           <span class="marge"></span>"Resultat": [
@@ -882,6 +928,17 @@ margin-left: 3em;
                                       <span class="marge3"></span>	" | Au moins 1 capteur de CO2 H.S. |"
                                       <span class="marge3"></span>],
                                       <span class="marge3"></span>"Luminosite": 500,
+                        	<span class="marge3"></span>"Materiel": {
+					<span class="marge3"></span><span class="marge"></span>"Logiciels": [
+						<span class="marge3"></span><span class="marge2"></span>"Cisco Packet Tracer",
+						<span class="marge3"></span><span class="marge2"></span>"Jupyter Notebook",
+						<span class="marge3"></span><span class="marge2"></span>"Riverbed",
+					<span class="marge3"></span><span class="marge2"></span>	"Rhapsody"
+					<span class="marge3"></span><span class="marge"></span>],
+				<span class="marge3"></span>	<span class="marge"></span>"Nombre de Places": 20,
+					<span class="marge3"></span><span class="marge"></span>"Nombres de PC": 11,
+				<span class="marge3"></span>	<span class="marge"></span>"Projecteur": true
+			<span class="marge3"></span>	},
                                       <span class="marge3"></span>"Note": 9.77,
                                       <span class="marge3"></span>"Temperature": 20.91
                                   <span class="marge2"></span>}
@@ -894,6 +951,12 @@ margin-left: 3em;
                                       <span class="marge3"></span>"Humidite": "Capteur désactivé par l'administrateur",
                                       <span class="marge3"></span>"Informations Problemes": [],
                                       <span class="marge3"></span>"Luminosite": 351.65,
+                       <span class="marge3"></span> "Materiel": {
+                        <span class="marge3"></span><span class="marge"></span>	"Logiciels": null,
+                        <span class="marge3"></span><span class="marge2"></span>	"Nombre de Places": 25,
+                        <span class="marge3"></span><span class="marge2"></span>	"Nombres de PC": 1,
+                        <span class="marge3"></span><span class="marge2"></span>	"Projecteur": true
+                        <span class="marge3"></span>},
                                       <span class="marge3"></span>"Note": 5.58,
                                       <span class="marge3"></span>"Temperature": 21.68
                                   <span class="marge2"></span>}
@@ -904,97 +967,103 @@ margin-left: 3em;
                       }
                       </code>
                     </pre>
-                  </div>
-                </td>
-                <td>Success</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "wrong token"}</td>
-                <td>Error: Wrong token</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "any token"}</td>
-                <td>Error: Token missing in URL</td>
-              </tr>
-              <tr>
-                <td>500</td>
-                <td>{"message": An error}</td>
-                <td>Error: Internal error</td>
-              </tr>
-            </table>
-            <p>The following table provides a description of the key/value items contained in the response of a successfull request (Code 200)</p>
-          <table id="keyMonitored_Command">
-            <tr>
-              <th>Key</th>
-              <th>Description</th>
-              <th>Unit</th>
-            </tr>
-            <tr>
-              <td>Acoustique</td>
-              <td>Means of the 10 last value of each sensors of sound in the room or status of it</td>
-              <td>dB</td>
-            </tr>
-            <tr>
-              <td>CO2</td>
-              <td>Means of the 10 last value of each sensors of CO2 in the room or status of it</td>
-              <td>ppm</td>
-            </tr>
-            <tr>
-              <td>Humidite</td>
-              <td>Means of the 10 last value of each sensors of humidity in the room or status of it</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>Luminosite</td>
-              <td>Means of the 10 last value of each sensors of luminosity in the room or status of it</td>
-              <td>lux</td>
-            </tr>
-            <tr>
-              <td>Temperature</td>
-              <td>Means of the 10 last value of each sensors of temperature in the room or status of it</td>
-              <td>°C</td>
-            </tr>
-            <tr>
-              <td>Problemes</td>
-              <td>Issues with the sensors</td>
-              <td>String</td>
-            </tr>
-            <tr>
-              <td>Note</td>
-              <td>Mark with the value of each data</td>
-              <td>Unit?</td>
-            </tr>
-          </table>
+                            </div>
+                        </td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "wrong token"}</td>
+                        <td>Error: Wrong token</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "any token"}</td>
+                        <td>Error: Token missing in URL</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>{"message": An error}</td>
+                        <td>Error: Internal error</td>
+                    </tr>
+                </table>
+                <p>The following table provides a description of the key/value items contained in the response of a
+                    successfull request (Code 200)</p>
+                <table id="keyMonitored_Command">
+                    <tr>
+                        <th>Key</th>
+                        <th>Description</th>
+                        <th>Unit</th>
+                    </tr>
+                    <tr>
+                        <td>Acoustique</td>
+                        <td>Means of the 10 last value of each sensors of sound in the room or status of it</td>
+                        <td>dB</td>
+                    </tr>
+                    <tr>
+                        <td>CO2</td>
+                        <td>Means of the 10 last value of each sensors of CO2 in the room or status of it</td>
+                        <td>ppm</td>
+                    </tr>
+                    <tr>
+                        <td>Humidite</td>
+                        <td>Means of the 10 last value of each sensors of humidity in the room or status of it</td>
+                        <td>%</td>
+                    </tr>
+                    <tr>
+                        <td>Luminosite</td>
+                        <td>Means of the 10 last value of each sensors of luminosity in the room or status of it</td>
+                        <td>lux</td>
+                    </tr>
+                    <tr>
+                        <td>Temperature</td>
+                        <td>Means of the 10 last value of each sensors of temperature in the room or status of it</td>
+                        <td>°C</td>
+                    </tr>
+                    <tr>
+                        <td>Problemes</td>
+                        <td>Issues with the sensors</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>Note</td>
+                        <td>Mark with the value of each data</td>
+                        <td>Unit?</td>
+                    </tr>
+                </table>
 
-          </section>
+        </section>
 
-      <!-- POST Add Raspberry -->
-      <section class="js-section">
-          <h3 class="section__title">POST Add Raspberry</h3>
-          <p>If you are administrator you can add Raspberry in the architecture and it  should be done using the following GET request:</p>
-          <div class="code__block code__block--notabs">
+        <!-- POST Add microcontrôleur -->
+        <section class="js-section">
+            <h3 class="section__title">POST Add microcontrôleur</h3>
+            <p>If you are administrator you can add microcontrôleur in the architecture and it should be done using the
+                following GET request:</p>
+            <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code>
                 https://aip-confort.milebits.com:3001/ajouterCapteurs?token=<FONT COLOR="#ff7f00">{token}</FONT>
               </code>
             </pre>
-          </div>
-        <table id="Parameters_PostCommands">
-            <tr>
-              <th>Parameters</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>token</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-            </tr>
-          </table>
-          <p>Body of the request shall contain the following data : </p>
-        <pre class="code code--block">
+            </div>
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
+            <p>Body of the request shall contain the following data : </p>
+            <pre class="code code--block">
               <code>
                 {
                     "ip":"193.50.135.205",
@@ -1007,60 +1076,64 @@ margin-left: 3em;
                 }
               </code>
             </pre>
-          <table id="Parameters_PostCommands">
-            <tr>
-              <th>Body FORM</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td> ip</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>IP address of the Raspberry<t</td>
-            </tr>
-            <tr>
-              <td>Salle</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Room where the Raspberry is<t</td>
-            </tr>
-            <tr>
-              <td>Temperature</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Starting state of the temperature sensor (it will be change by the raspberry automatically)</td>
-            </tr>
-            <tr>
-              <td>Humidite</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Starting state of the humidity sensor (it will be change by the raspberry automatically)</td>
-            </tr>
-            <tr>
-              <td>Acoustique</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Starting state of the sound sensor (it will be change by the raspberry automatically)</td>
-            </tr>
-            <tr>
-              <td>CO2</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Starting state of the co2 sensor (it will be change by the raspberry automatically)</td>
-            </tr>
-            <tr>
-              <td>Luminosite</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Starting state of the luminosity sensor (it will be change by the raspberry automatically)</td>
-            </tr>
-          </table>
-          <div class="code__block code__block--notabs">
-            <p>Possible response codes:</p>
-            <table id="responseCode">
-              <tr>
-                <th>Code</th>
-                <th>Payload</th>
-                <th>Meaning</th>
-              </tr>
-              <tr>
-                <td>200</td>
-                <td>
-                  <div class="code__block code__block--notabs">
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Body FORM</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td> ip</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>IP address of the microcontrôleur
+                        <t
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salle</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Room where the microcontrôleur is
+                        <t
+                    </td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Starting state of the temperature sensor (it will be change by the microcontrôleur automatically)</td>
+                </tr>
+                <tr>
+                    <td>Humidite</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Starting state of the humidity sensor (it will be change by the microcontrôleur automatically)</td>
+                </tr>
+                <tr>
+                    <td>Acoustique</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Starting state of the sound sensor (it will be change by the microcontrôleur automatically)</td>
+                </tr>
+                <tr>
+                    <td>CO2</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Starting state of the co2 sensor (it will be change by the microcontrôleur automatically)</td>
+                </tr>
+                <tr>
+                    <td>Luminosite</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Starting state of the luminosity sensor (it will be change by the microcontrôleur automatically)</td>
+                </tr>
+            </table>
+            <div class="code__block code__block--notabs">
+                <p>Possible response codes:</p>
+                <table id="responseCode">
+                    <tr>
+                        <th>Code</th>
+                        <th>Payload</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>
+                            <div class="code__block code__block--notabs">
                     <pre class="code code--block">
                       <code>{
                                 "data": "Done",
@@ -1069,89 +1142,96 @@ margin-left: 3em;
                             }
                       </code>
                     </pre>
-                  </div>
-                </td>
-                <td>Success</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "Already exist"}</td>
-                <td>Error: Raspberry with this ip already exist</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "wrong token"}</td>
-                <td>Error: Wrong token</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "any token"}</td>
-                <td>Error: Token missing in URL</td>
-              </tr>
-              <tr>
-                <td>500</td>
-                <td>{"message": An error}</td>
-                <td>Error: Internal error</td>
-              </tr>
-            </table>
+                            </div>
+                        </td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "Already exist"}</td>
+                        <td>Error: microcontrôleur with this ip already exist</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "wrong token"}</td>
+                        <td>Error: Wrong token</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "any token"}</td>
+                        <td>Error: Token missing in URL</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>{"message": An error}</td>
+                        <td>Error: Internal error</td>
+                    </tr>
+                </table>
 
-          </section>
+        </section>
 
-      <!-- POST Delete Raspberry -->
-      <section class="js-section">
-          <h3 class="section__title">POST Delete Raspberry</h3>
-          <p>If you are administrator you can remove Raspberry in the architecture and it  should be done using the following GET request:</p>
-          <div class="code__block code__block--notabs">
+        <!-- POST Delete microcontrôleur -->
+        <section class="js-section">
+            <h3 class="section__title">POST Delete microcontrôleur</h3>
+            <p>If you are administrator you can remove microcontrôleur in the architecture and it should be done using the
+                following GET request:</p>
+            <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code>
                 https://aip-confort.milebits.com:3001/supprimerCapteurs?token=<FONT COLOR="#ff7f00">{token}</FONT>
               </code>
             </pre>
-          </div>
-        <table id="Parameters_PostCommands">
-            <tr>
-              <th>Parameters</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>token</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-            </tr>
-          </table>
-          <p>Body of the request shall contain the following data : </p>
-        <pre class="code code--block">
+            </div>
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
+            <p>Body of the request shall contain the following data : </p>
+            <pre class="code code--block">
               <code>
                 {
                     "ip":"193.50.135.205"
                 }
               </code>
             </pre>
-          <table id="Parameters_PostCommands">
-            <tr>
-              <th>Body FORM</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td> ip</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>IP address of the Raspberry<t</td>
-            </tr>
-          </table>
-          <div class="code__block code__block--notabs">
-            <p>Possible response codes:</p>
-            <table id="responseCode">
-              <tr>
-                <th>Code</th>
-                <th>Payload</th>
-                <th>Meaning</th>
-              </tr>
-              <tr>
-                <td>200</td>
-                <td>
-                  <div class="code__block code__block--notabs">
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Body FORM</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td> ip</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>IP address of the microcontrôleur
+                        <t
+                    </td>
+                </tr>
+            </table>
+            <div class="code__block code__block--notabs">
+                <p>Possible response codes:</p>
+                <table id="responseCode">
+                    <tr>
+                        <th>Code</th>
+                        <th>Payload</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>
+                            <div class="code__block code__block--notabs">
                     <pre class="code code--block">
                       <code>{
                                 "data": "Done",
@@ -1160,59 +1240,64 @@ margin-left: 3em;
                             }
                       </code>
                     </pre>
-                  </div>
-                </td>
-                <td>Success</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": Any raspberry with this ip"}</td>
-                <td>Error: Any raspberry with this ip don't exist</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "wrong token"}</td>
-                <td>Error: Wrong token</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "any token"}</td>
-                <td>Error: Token missing in URL</td>
-              </tr>
-              <tr>
-                <td>500</td>
-                <td>{"message": An error}</td>
-                <td>Error: Internal error</td>
-              </tr>
-            </table>
+                            </div>
+                        </td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": Any microcontrôleur with this ip"}</td>
+                        <td>Error: Any microcontrôleur with this ip don't exist</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "wrong token"}</td>
+                        <td>Error: Wrong token</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "any token"}</td>
+                        <td>Error: Token missing in URL</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>{"message": An error}</td>
+                        <td>Error: Internal error</td>
+                    </tr>
+                </table>
 
-          </section>
+        </section>
 
-      <!-- POST Modify Status Room's sensors -->
-      <section class="js-section">
-          <h3 class="section__title">POST Modify Status Room's sensors</h3>
-          <p>If you are administrator you can modify the status of every sensors in a room and it  should be done using the following GET request:</p>
-          <div class="code__block code__block--notabs">
+        <!-- POST Modify Status Room's sensors -->
+        <section class="js-section">
+            <h3 class="section__title">POST Modify Status Room's sensors</h3>
+            <p>If you are administrator you can modify the status of every sensors in a room and it should be done using
+                the following GET request:</p>
+            <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code>
                 https://aip-confort.milebits.com:3001/modifierCapteurs?token=<FONT COLOR="#ff7f00">{token}</FONT>
               </code>
             </pre>
-          </div>
-        <table id="Parameters_PostCommands">
-            <tr>
-              <th>Parameters</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>token</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-            </tr>
-          </table>
-          <p>Body of the request shall contain the following data : </p>
-        <pre class="code code--block">
+            </div>
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
+            <p>Body of the request shall contain the following data : </p>
+            <pre class="code code--block">
               <code>
                 {
                     "Salle":"S108",
@@ -1224,55 +1309,55 @@ margin-left: 3em;
                 }
               </code>
             </pre>
-          <table id="Parameters_PostCommands">
-            <tr>
-              <th>Body FORM</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>Salle</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Room where you want modify the status of sensors</td>
-            </tr>
-            <tr>
-              <td>Temperature</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the temperature sensor </td>
-            </tr>
-            <tr>
-              <td>Humidite</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the humidity sensor </td>
-            </tr>
-            <tr>
-              <td>Acoustique</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the sound sensor</td>
-            </tr>
-            <tr>
-              <td>CO2</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the co2 sensor</td>
-            </tr>
-            <tr>
-              <td>Luminosite</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the luminosity sensor</td>
-            </tr>
-          </table>
-          <div class="code__block code__block--notabs">
-            <p>Possible response codes:</p>
-            <table id="responseCode">
-              <tr>
-                <th>Code</th>
-                <th>Payload</th>
-                <th>Meaning</th>
-              </tr>
-              <tr>
-                <td>200</td>
-                <td>
-                  <div class="code__block code__block--notabs">
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Body FORM</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Salle</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Room where you want modify the status of sensors</td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the temperature sensor</td>
+                </tr>
+                <tr>
+                    <td>Humidite</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the humidity sensor</td>
+                </tr>
+                <tr>
+                    <td>Acoustique</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the sound sensor</td>
+                </tr>
+                <tr>
+                    <td>CO2</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the co2 sensor</td>
+                </tr>
+                <tr>
+                    <td>Luminosite</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the luminosity sensor</td>
+                </tr>
+            </table>
+            <div class="code__block code__block--notabs">
+                <p>Possible response codes:</p>
+                <table id="responseCode">
+                    <tr>
+                        <th>Code</th>
+                        <th>Payload</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>
+                            <div class="code__block code__block--notabs">
                     <pre class="code code--block">
                       <code>{
                                 "data": "Done",
@@ -1281,14 +1366,14 @@ margin-left: 3em;
                             }
                       </code>
                     </pre>
-                  </div>
-                </td>
-                <td>Success</td>
-              </tr>
-              <tr>
-                <td>204</td>
-                <td>
-                  <div class="code__block code__block--notabs">
+                            </div>
+                        </td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>204</td>
+                        <td>
+                            <div class="code__block code__block--notabs">
                     <pre class="code code--block">
                       <code>{
                                 "data": "Done",
@@ -1297,54 +1382,59 @@ margin-left: 3em;
                             }
                       </code>
                     </pre>
-                  </div>
-                </td>
-                <td>Success : Any Room with this name</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "wrong token"}</td>
-                <td>Error: Wrong token</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "any token"}</td>
-                <td>Error: Token missing in URL</td>
-              </tr>
-              <tr>
-                <td>500</td>
-                <td>{"message": An error}</td>
-                <td>Error: Internal error</td>
-              </tr>
-            </table>
+                            </div>
+                        </td>
+                        <td>Success : Any Room with this name</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "wrong token"}</td>
+                        <td>Error: Wrong token</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "any token"}</td>
+                        <td>Error: Token missing in URL</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>{"message": An error}</td>
+                        <td>Error: Internal error</td>
+                    </tr>
+                </table>
 
-          </section>
+        </section>
 
-      <!-- POST Add Room -->
-      <section class="js-section">
-          <h3 class="section__title">POST Add Room</h3>
-          <p>If you are administrator you can add Room in the architecture and it  should be done using the following GET request:</p>
-          <div class="code__block code__block--notabs">
+        <!-- POST Add Room -->
+        <section class="js-section">
+            <h3 class="section__title">POST Add Room</h3>
+            <p>If you are administrator you can add Room in the architecture and it should be done using the following
+                GET request:</p>
+            <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code>
                 https://aip-confort.milebits.com:3001/ajouterSalle?token=<FONT COLOR="#ff7f00">{token}</FONT>
               </code>
             </pre>
-          </div>
-        <table id="Parameters_PostCommands">
-            <tr>
-              <th>Parameters</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>token</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-            </tr>
-          </table>
-          <p>Body of the request shall contain the following data : </p>
-        <pre class="code code--block">
+            </div>
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
+            <p>Body of the request shall contain the following data : </p>
+            <pre class="code code--block">
               <code>
                 {
                     "Salle":"S108",
@@ -1356,55 +1446,57 @@ margin-left: 3em;
                 }
               </code>
             </pre>
-          <table id="Parameters_PostCommands">
-            <tr>
-              <th>Body FORM</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>Salle</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Room name<t</td>
-            </tr>
-            <tr>
-              <td>Temperature</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the temperature sensor wanted by the administrator</td>
-            </tr>
-            <tr>
-              <td>Humidite</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the humidity sensor wanted by the administrator</td>
-            </tr>
-            <tr>
-              <td>Acoustique</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the sound sensor wanted by the administrator</td>
-            </tr>
-            <tr>
-              <td>CO2</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the CO2 sensor wanted by the administrator</td>
-            </tr>
-            <tr>
-              <td>Luminosite</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>State of the luminosity sensor wanted by the administrator</td>
-            </tr>
-          </table>
-          <div class="code__block code__block--notabs">
-            <p>Possible response codes:</p>
-            <table id="responseCode">
-              <tr>
-                <th>Code</th>
-                <th>Payload</th>
-                <th>Meaning</th>
-              </tr>
-              <tr>
-                <td>200</td>
-                <td>
-                  <div class="code__block code__block--notabs">
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Body FORM</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Salle</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Room name
+                        <t
+                    </td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the temperature sensor wanted by the administrator</td>
+                </tr>
+                <tr>
+                    <td>Humidite</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the humidity sensor wanted by the administrator</td>
+                </tr>
+                <tr>
+                    <td>Acoustique</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the sound sensor wanted by the administrator</td>
+                </tr>
+                <tr>
+                    <td>CO2</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the CO2 sensor wanted by the administrator</td>
+                </tr>
+                <tr>
+                    <td>Luminosite</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>State of the luminosity sensor wanted by the administrator</td>
+                </tr>
+            </table>
+            <div class="code__block code__block--notabs">
+                <p>Possible response codes:</p>
+                <table id="responseCode">
+                    <tr>
+                        <th>Code</th>
+                        <th>Payload</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>
+                            <div class="code__block code__block--notabs">
                     <pre class="code code--block">
                       <code>{
                                 "data": "Done",
@@ -1413,89 +1505,96 @@ margin-left: 3em;
                             }
                       </code>
                     </pre>
-                  </div>
-                </td>
-                <td>Success</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "Salle already exist"}</td>
-                <td>Error: Room with this name already exist</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "wrong token"}</td>
-                <td>Error: Wrong token</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "any token"}</td>
-                <td>Error: Token missing in URL</td>
-              </tr>
-              <tr>
-                <td>500</td>
-                <td>{"message": An error}</td>
-                <td>Error: Internal error</td>
-              </tr>
-            </table>
+                            </div>
+                        </td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "Salle already exist"}</td>
+                        <td>Error: Room with this name already exist</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "wrong token"}</td>
+                        <td>Error: Wrong token</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "any token"}</td>
+                        <td>Error: Token missing in URL</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>{"message": An error}</td>
+                        <td>Error: Internal error</td>
+                    </tr>
+                </table>
 
-          </section>
+        </section>
 
-      <!-- POST Delete Room -->
-      <section class="js-section">
-          <h3 class="section__title">POST Delete Room</h3>
-          <p>If you are administrator you can remove Room in the architecture and it  should be done using the following GET request:</p>
-          <div class="code__block code__block--notabs">
+        <!-- POST Delete Room -->
+        <section class="js-section">
+            <h3 class="section__title">POST Delete Room</h3>
+            <p>If you are administrator you can remove Room in the architecture and it should be done using the
+                following GET request:</p>
+            <div class="code__block code__block--notabs">
             <pre class="code code--block">
               <code>
                 https://aip-confort.milebits.com:3001/supprimerSalle?token=<FONT COLOR="#ff7f00">{token}</FONT>
               </code>
             </pre>
-          </div>
-        <table id="Parameters_PostCommands">
-            <tr>
-              <th>Parameters</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>token</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Client token generated using JWT (for further information on <a href="https://jwt.io" target="_blank">JWB Website</a>). You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000" target="_blank">Click here to go to the website</a></td>
-            </tr>
-          </table>
-          <p>Body of the request shall contain the following data : </p>
-        <pre class="code code--block">
+            </div>
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Parameters</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>token</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Client token generated using JWT (for further information on <a href="https://jwt.io"
+                                                                                        target="_blank">JWB Website</a>).
+                        You can find your token in the website header : <a href="https://aip-confort.milebits.com:3000"
+                                                                           target="_blank">Click here to go to the
+                            website</a></td>
+                </tr>
+            </table>
+            <p>Body of the request shall contain the following data : </p>
+            <pre class="code code--block">
               <code>
                 {
                     "Salle":"Sxxx
                 }
               </code>
             </pre>
-          <table id="Parameters_PostCommands">
-            <tr>
-              <th>Body FORM</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>Salle</td>
-              <td><FONT COLOR="#A0A0A0">required</FONT></td>
-              <td>Name of the Room<t</td>
-            </tr>
-          </table>
-          <div class="code__block code__block--notabs">
-            <p>Possible response codes:</p>
-            <table id="responseCode">
-              <tr>
-                <th>Code</th>
-                <th>Payload</th>
-                <th>Meaning</th>
-              </tr>
-              <tr>
-                <td>200</td>
-                <td>
-                  <div class="code__block code__block--notabs">
+            <table id="Parameters_PostCommands">
+                <tr>
+                    <th>Body FORM</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Salle</td>
+                    <td><FONT COLOR="#A0A0A0">required</FONT></td>
+                    <td>Name of the Room
+                        <t
+                    </td>
+                </tr>
+            </table>
+            <div class="code__block code__block--notabs">
+                <p>Possible response codes:</p>
+                <table id="responseCode">
+                    <tr>
+                        <th>Code</th>
+                        <th>Payload</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>
+                            <div class="code__block code__block--notabs">
                     <pre class="code code--block">
                       <code>{
                                 "data": "Done",
@@ -1504,40 +1603,42 @@ margin-left: 3em;
                             }
                       </code>
                     </pre>
-                  </div>
-                </td>
-                <td>Success</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": Any room with this name"}</td>
-                <td>Error: Any room with this name don't exist</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "wrong token"}</td>
-                <td>Error: Wrong token</td>
-              </tr>
-              <tr>
-                <td>401</td>
-                <td>{"message": "any token"}</td>
-                <td>Error: Token missing in URL</td>
-              </tr>
-              <tr>
-                <td>500</td>
-                <td>{"message": An error}</td>
-                <td>Error: Internal error</td>
-              </tr>
-            </table>
+                            </div>
+                        </td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": Any room with this name"}</td>
+                        <td>Error: Any room with this name don't exist</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "wrong token"}</td>
+                        <td>Error: Wrong token</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>{"message": "any token"}</td>
+                        <td>Error: Token missing in URL</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>{"message": An error}</td>
+                        <td>Error: Internal error</td>
+                    </tr>
+                </table>
 
-          </section>
+        </section>
 
-        </article>
-      </div>
+    </article>
+</div>
 
-      <footer class="footer">The official HUB page of the AIP Confort API is available <a href="https://aip-confort.milebits.com:3001/" target="_blank" class="link link--light">here</a>.</footer>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script>
-      <script src="scribbler.js"></script>
-    </body>
-    </html>
+<footer class="footer">The official HUB page of the AIP Confort API is available <a
+        href="https://aip-confort.milebits.com:3001/" target="_blank" class="link link--light">here</a>.
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="scribbler.js"></script>
+</body>
+</html>
