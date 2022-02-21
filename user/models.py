@@ -22,6 +22,7 @@ class User:
         else:
             user = json.dumps(user)
             url = f"{api_url}/signup"
+            print(f"[jalabaj] url is {url}")
             resp = requests.post(url, json=user)
             message = resp.json()['message']
         if resp.json()['status'] == "successful":
