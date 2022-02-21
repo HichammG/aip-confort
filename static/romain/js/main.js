@@ -589,7 +589,7 @@
         var CO2 = document.getElementById("ADRCO2").checked;
         var Humidite = document.getElementById("ADRHumidite").checked;
 
-        var data = {"Salle": salle, "ip": ip, "Temperature": Temperature, "Son": Son, "Luminosite": Luminosite, "CO2": CO2, "Humidite": Humidite};
+        var data = {"Salle": salle, "ip": ip, "Temperature": Temperature, "Acoustique": Son, "Luminosite": Luminosite, "CO2": CO2, "Humidite": Humidite};
         var token = window.localStorage.getItem('token');
         // Ajouter ajouter capteur ici
 
@@ -723,7 +723,32 @@
             }
             else{
             // Récupérer données
+                var Salle = document.getElementById('MDRSalle').value;
+                var Temperature = document.getElementById("MDRTemperature").checked;
+                var Son = document.getElementById("MDRSon").checked;
+                var Luminosite = document.getElementById("MDRLuminosite").checked;
+                var CO2 = document.getElementById("MDRCO2").checked;
+                var Humidite = document.getElementById("MDRHumidite").checked;
+
+                var data = {
+                    "Salle": Salle,
+                    "Temperature": Temperature,
+                    "Acoustique": Son,
+                    "Luminosite": Luminosite,
+                    "CO2": CO2,
+                    "Humidite": Humidite
+                };
+                var token = window.localStorage.getItem('token');
             // Ajouter modifier capteur ici
+                $.ajax({
+                    url: "https://aip-confort.milebits.com:3001/modifierCapteurs?token={token}".replaceAll('{token}', token),
+                    type: "POST",
+                    dataType: "json",
+                    crossDomain: true,
+                    data: data,
+                    success: () => alert("Etatscapteurs modifié"),
+                    error: () => alert("Une erreur s'est produite")
+                });
             }
         }
 
