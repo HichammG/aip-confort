@@ -210,8 +210,9 @@
                     var lum = donnees['Luminosite'];
 
                     var content = "Salle {NOM}".replace('{NOM}', nom);
+                    var materiel = donnees['Materiel'];
 
-                    var div = '<div style="text-align: center;" class="card"><div style="text-align: center;" class="card-header" id="Salle_{ID}_Heading"><h2 class="mb-0 text-center" style="text-align: center; width: 100%;"><button style="text-align: center;" class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#Salle_{ID}_Body" aria-expanded="false" aria-controls="Salle_{ID}_Body">{content} à {Note}/10 <div id="salle_rater_{ID}"></div></button></h2></div><div id="Salle_{ID}_Body" class="collapse" aria-labelledby="Salle_{ID}_Heading" data-parent="#DonneesClassementDiv"><div class="card-body"><div><strong>Temperature:</strong><span>{TEMPERATURE} °C</span></div><div><strong>Acoustique:</strong><span>{Acoustique} dB</span></div><div><strong>Humidite:</strong><span>{Humidite} %</span></div><div><strong>Luminosité:</strong><span>{Lum} lux</span></div><div><strong>CO2:</strong><span>{CO2} ppm</span></div></div></div></div>';
+                    var div = '<div style="text-align: center;" class="card"><div style="text-align: center;" class="card-header" id="Salle_{ID}_Heading"><h2 class="mb-0 text-center" style="text-align: center; width: 100%;"><button style="text-align: center;" class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#Salle_{ID}_Body" aria-expanded="false" aria-controls="Salle_{ID}_Body">{content} à {Note}/10 <div id="salle_rater_{ID}"></div></button></h2></div><div id="Salle_{ID}_Body" class="collapse" aria-labelledby="Salle_{ID}_Heading" data-parent="#DonneesClassementDiv"><div class="card-body"><div><strong>Temperature:</strong><span>{TEMPERATURE} °C</span></div><div><strong>Acoustique:</strong><span>{Acoustique} dB</span></div><div><strong>Humidite:</strong><span>{Humidite} %</span></div><div><strong>Luminosité:</strong><span>{Lum} lux</span></div><div><strong>CO2:</strong><span>{CO2} ppm</span></div><div><strong>Cette salle dispose de :</strong><span>{materiel}</span></div></div></div></div>';
                     div = div.replaceAll('{ID}', nom);
                     div = div.replaceAll('{content}', content);
                     div = div.replaceAll('{TEMPERATURE}', temp);
@@ -221,6 +222,7 @@
                     div = div.replaceAll('{Lum}', lum);
                     div = div.replaceAll('{Note}', '        ' + note);
                     items = items + div;
+                    div = div.replaceAll('{materiel}', materiel);
                 });
                 $('#DonneesClassementDiv').html(items);
                 salles.forEach(function (salle, index) {
