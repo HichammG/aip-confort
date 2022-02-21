@@ -794,6 +794,10 @@ def indexajouterSalle():
     res = []
     token = request.args.get('token')
     data = request.get_json()
+    #Fix issue : data is empty with CORS in browser
+    if data is None:
+        data = request.form.to_dict()
+
     if isinstance(data, str):  # check if data is str
         data = json.loads(data)  # convert data to dict
     Salle = data['Salle']
