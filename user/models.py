@@ -2,8 +2,6 @@ import json
 import requests
 from flask import jsonify, request, session, redirect
 
-api_url = "https://aip-confort.milebits.com:3001"
-
 class User:
 
     @property
@@ -21,8 +19,7 @@ class User:
             return jsonify({"message": message, "status": "failed"}), 401
         else:
             user = json.dumps(user)
-            url = f"{api_url}/signup"
-            print(f"[jalabaj] url is {url}")
+            url = "https://aip-confort.milebits.com:3001/signup"
             resp = requests.post(url, json=user)
             message = resp.json()['message']
         if resp.json()['status'] == "successful":
@@ -39,7 +36,7 @@ class login_user:
             "password": request.form.get('pass')
         }
         user = json.dumps(user_login)
-        url = f"{api_url}/login"
+        url = "https://aip-confort.milebits.com:3001/login"
         resp = requests.post(url, json=user_login)
         message = resp.json()['message']
         token = resp.json()['data']['user']['token']
