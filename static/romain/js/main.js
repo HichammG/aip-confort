@@ -232,11 +232,10 @@
                     div = div.replaceAll('{Lum}', lum);
                     div = div.replaceAll('{Note}', '        ' + note);
                     items = items + div;
-                    div = div.replaceAll('{Logiciels}',logiciels );
-                    div = div.replaceAll('{Nbplaces}',Nbplaces );
-                    div = div.replaceAll('{Nbpc}',Nbpc );
-                    div = div.replaceAll('{Logiciels}',logiciels );
-                    div = div.replaceAll('{Projecteur}',logiciels );
+                    div = div.replaceAll('{Logiciels}',logiciels);
+                    div = div.replaceAll('{Nbplaces}',Nbplaces);
+                    div = div.replaceAll('{Nbpc}',Nbpc);
+                    div = div.replaceAll('{Projecteur}',Projecteur);
                 });
                 $('#DonneesClassementDiv').html(items);
                 salles.forEach(function (salle, index) {
