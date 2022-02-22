@@ -214,10 +214,11 @@
                     var logiciels = JSON.stringify(logi);
                     var Nbplaces = donnees['Nombre de Places'];
                     var Nbpc = donnees['Nombres de PC'];
-                    var Projecteur = donnees['Projecteur'] ? "oui" : "non"
+                    var Projecteur = donnees['Projecteur'] ? "non" : "oui"
                     //logs
                     console.log('khabaj');
                     console.log(logiciels);
+                    console.log(typeof(logiciels));
                     console.log(logi);
                     console.log(Projecteur);
                     console.log(Nbpc);
