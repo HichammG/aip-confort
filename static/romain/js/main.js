@@ -231,11 +231,12 @@
                     div = div.replaceAll('{CO2}', CO2);
                     div = div.replaceAll('{Lum}', lum);
                     div = div.replaceAll('{Note}', '        ' + note);
-                    items = items + div;
+
                     div = div.replaceAll('{Logiciels}',logiciels);
                     div = div.replaceAll('{Nbplaces}',Nbplaces);
                     div = div.replaceAll('{Nbpc}',Nbpc);
                     div = div.replaceAll('{Projecteur}',Projecteur);
+                    items = items + div;
                 });
                 $('#DonneesClassementDiv').html(items);
                 salles.forEach(function (salle, index) {
