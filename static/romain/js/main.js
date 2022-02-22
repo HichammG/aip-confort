@@ -212,7 +212,7 @@
                     //materiel
                     var logi = donnees['Materiel']['Logiciels'];
                     logi = JSON.stringify(logi);
-                    var logiciels= logi.replaceAll("[","").replaceAll('"', "").replaceAll("]","");
+                    var logiciels= logi.replaceAll("[","").replaceAll('"', "").replaceAll("]","").replaceAll(",", ", ");
                     var Nbplaces = donnees['Materiel']['Nombre de Places'];
                     var Nbpc = donnees['Materiel']['Nombres de PC'];
                     var Projecteur = donnees['Projecteur'] ? "non" : "oui"
