@@ -246,6 +246,7 @@
                         element: rateBlock[0],
                         rateCallback: function (rating, done) {
                             myRater.disable();
+                            myRater.setRating(note * 0.5);
                             done();
                         },
                         readOnly: true,
