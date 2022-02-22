@@ -211,7 +211,8 @@
                     var content = "Salle {NOM}".replace('{NOM}', nom);
                     //materiel
                     var logi = donnees['Materiel']['Logiciels'];
-                    var logiciels = JSON.stringify(logi);
+                    logi = JSON.stringify(logi);
+                    var logiciels= logi.replaceAll("[","").replaceAll('"', "").replaceAll("]","");
                     var Nbplaces = donnees['Nombre de Places'];
                     var Nbpc = donnees['Nombres de PC'];
                     var Projecteur = donnees['Projecteur'] ? "non" : "oui"
