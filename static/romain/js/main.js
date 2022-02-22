@@ -183,6 +183,7 @@
     $('.form-perso').on('submit', function () {
         var check = true;
         var params = collectParams();
+        console.log(params);
         // Collecter le token
         var token = $('#token').val();
         console.log(token);
@@ -278,8 +279,6 @@
             "demandeCO2": CO2,
             "demandeHumidite": Humidite
         };
-        console.log('my data');
-        console.log(data);
         return data;
     }
 
