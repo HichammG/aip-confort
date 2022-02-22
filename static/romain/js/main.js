@@ -278,6 +278,8 @@
             "demandeCO2": CO2,
             "demandeHumidite": Humidite
         };
+        console.log('my data');
+        console.log(data);
         return data;
     }
 
