@@ -217,7 +217,7 @@
                     var Nbpc = donnees['Materiel']['Nombres de PC'];
                     var Projecteur = donnees['Projecteur'] ? "non" : "oui"
                     //logs
-                    if (logiciels==null){logiciels="aucun"};
+                    if (logiciels==null ){logiciels="aucun"}
                     console.log('khabaj');
                     console.log(logiciels);
                     console.log(Nbplaces);
