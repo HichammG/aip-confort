@@ -251,7 +251,8 @@
                         },
                         readOnly: true,
                     });
-                    myRater.setRating(note * 0.5);
+                    myRater.setRating(note * 0.5)
+                    $(`#salle_rater_${nom}`).attr('title', `${note * 0.5}/5`);
                 });
             },
             error: function (resp) {
