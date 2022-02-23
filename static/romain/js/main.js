@@ -203,12 +203,12 @@
                     var nom = Object.keys(salle)[0];
                     var donnees = salle[nom];
 
-                    var temp = donnees['Temperature'];
-                    var acoustic = donnees['Acoustique'];
-                    var humidity = donnees['Humidite'];
-                    var CO2 = donnees['CO2'];
+                    var temp = donnees['Temperature'] !== undefined ? donnees['Temperature'] : "Désactivé";
+                    var acoustic = donnees['Acoustique'] !== undefined ? donnees['Acoustique'] : "Désactivé";
+                    var humidity = donnees['Humidite'] !== undefined ? donnees['Humidite'] : "Désactivé";
+                    var CO2 = donnees['CO2'] !== undefined ? donnees['CO2'] : "Désactivé";
                     var note = donnees['Note'];
-                    var lum = donnees['Luminosite'];
+                    var lum = donnees['Luminosite'] !== undefined ? donnees['Luminosite'] : "Désactivé";
                     var content = "Salle {NOM}".replace('{NOM}', nom);
                     //materiel
                     var logi = donnees['Materiel']['Logiciels'];
