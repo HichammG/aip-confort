@@ -549,7 +549,7 @@ def indexMADM():
                     for i in range(int(len(sortRes))):
                         res.append(sortRes[i][0])
 
-                    if demandeTemperature == True and demandeTemperature == True and demandeTemperature == True and demandeTemperature == True and demandeTemperature == True:
+                    if demandeTemperature == True and demandeAcoustique == True and demandeLuminosite == True and demandeCO2 == True and demandeHumidite == True:
                         db['MADM'].delete_many({})
                         res2 = {"Time": time.time(), "data": res}
                         db['MADM'].insert_one(res2)
