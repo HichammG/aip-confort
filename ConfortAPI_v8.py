@@ -511,6 +511,8 @@ def indexMADM():
                             if (EtatCapteursGlobal[4] == False):
                                 InfoProbleme.append(" | Au moins 1 capteur d'humidité H.S. |")
 
+                        Materiel = None
+
                         for r in db['Materiel_Salle'].find({salle[i]: {"$exists": True}}):
                             Materiel = r[salle[i]]
 
