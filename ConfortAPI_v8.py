@@ -218,7 +218,7 @@ def indexMADM():
     demandeCO2 = bool(data['demandeCO2'])
     demandeHumidite = bool(data['demandeHumidite'])
 
-    if demandeTemperature == True and demandeTemperature == True and demandeTemperature == True and demandeTemperature == True and demandeTemperature == True and tooSoon == True:
+    if demandeTemperature == True and demandeAcoustique == True and demandeLuminosite == True and demandeCO2 == True and demandeHumidite == True and tooSoon == True:
 
         for r in db['MADM'].find():
             res = r['data']
