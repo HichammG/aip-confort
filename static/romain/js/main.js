@@ -213,12 +213,14 @@
                     //materiel
                     var logi = donnees['Materiel']['Logiciels'];
                     logi = JSON.stringify(logi);
-                    var logiciels= logi.replaceAll("[","").replaceAll('"', "").replaceAll("]","").replaceAll(",", ", ");
+                    var logiciels = logi.replaceAll("[", "").replaceAll('"', "").replaceAll("]", "").replaceAll(",", ", ");
                     var Nbplaces = donnees['Materiel']['Nombre de Places'];
                     var Nbpc = donnees['Materiel']['Nombres de PC'];
                     var Projecteur = donnees['Projecteur'] ? "non" : "oui"
                     //logs
-                    if (logiciels==null || logiciels=="null"){logiciels='aucun';}
+                    if (logiciels == null || logiciels == "null") {
+                        logiciels = 'aucun';
+                    }
                     var div = '<div style="text-align: center;" class="card"><div style="text-align: center;" class="card-header" id="Salle_{ID}_Heading"><h2 class="mb-0 text-center" style="text-align: center; width: 100%;"><button style="text-align: center;" class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#Salle_{ID}_Body" aria-expanded="false" aria-controls="Salle_{ID}_Body">{content} a {Note}/10 <div id="salle_rater_{ID}"></div></button></h2></div><div id="Salle_{ID}_Body" class="collapse" aria-labelledby="Salle_{ID}_Heading" data-parent="#DonneesClassementDiv"><div class="card-body"><div><strong>Température:</strong><span>{TEMPERATURE} °C</span></div><div><strong>Acoustique:</strong><span>{Acoustique} dB</span></div><div><strong>Humidité:</strong><span>{Humidite} %</span></div><div><strong>Luminosité:</strong><span>{Lum} lux</span></div><div><strong>CO2:</strong><span>{CO2} ppm</span></div><div><strong>Cette salle dispose de :</strong><span></span></div><div><strong>Logiciels :</strong><span>{Logiciels}</span></div><div><strong>Nombre de places :</strong><span>{Nbplaces}</span></div><div><strong>Nombre de PCs :</strong><span>{Nbpc}</span></div><div><strong>Projecteur :</strong><span>{Projecteur}</span></div></div></div></div>';
                     div = div.replaceAll('{ID}', nom);
                     div = div.replaceAll('{content}', content);
@@ -229,10 +231,10 @@
                     div = div.replaceAll('{Lum}', lum);
                     div = div.replaceAll('{Note}', '        ' + note);
 
-                    div = div.replaceAll('{Logiciels}',logiciels);
-                    div = div.replaceAll('{Nbplaces}',Nbplaces);
-                    div = div.replaceAll('{Nbpc}',Nbpc);
-                    div = div.replaceAll('{Projecteur}',Projecteur);
+                    div = div.replaceAll('{Logiciels}', logiciels);
+                    div = div.replaceAll('{Nbplaces}', Nbplaces);
+                    div = div.replaceAll('{Nbpc}', Nbpc);
+                    div = div.replaceAll('{Projecteur}', Projecteur);
                     items = items + div;
                 });
                 $('#DonneesClassementDiv').html(items);
@@ -547,8 +549,12 @@
                     var Luminosite = donnees['Luminosite'];
                     var Son = donnees['Son'];
                     var Temperature = donnees['Temperature'];
-
-                    var content = "Salle {NOM}".replace('{NOM}', nom);
+                    var content = "";
+                    if (nom.includes("S1")) {
+                        content = "Salle {NOM}".replace('{NOM}', nom);
+                    } else {
+                        content = "Microcontrôleur {NOM}".replace('{NOM}', nom);
+                    }
 
                     var div = '<div style="text-align: center;" class="card"><div style="text-align: center;" class="card-header" id="Salle_{ID}_Heading"><h2 class="mb-0 text-center" style="text-align: center; width: 100%;"><button style="text-align: center;" class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#Salle_{ID}_Body" aria-expanded="false" aria-controls="Salle_{ID}_Body">{content} <div id="salle_rater_{ID}"></div></button></h2></div><div id="Salle_{ID}_Body" class="collapse" aria-labelledby="Salle_{ID}_Heading" data-parent="#DonneesClassementDiv"><div class="card-body"><div><strong>Temperature:</strong><span>{TEMPERATURE}</span></div><div><strong>Acoustique:</strong><span>{Acoustique}</span></div><div><strong>Humidite:</strong><span>{Humidite}</span></div><div><strong>Son:</strong><span>{Lum}</span></div><div><strong>CO2:</strong><span>{CO2}</span></div></div></div></div>';
 
