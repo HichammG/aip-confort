@@ -212,17 +212,23 @@ def indexMADM():
     if time.time() - 60 < lastMADM:
         tooSoon = True
 
-    print("JALABAAAAAAJ------------------")
-    print(data['demandeTemperature'])
-    print(type(data['demandeTemperature']))
-    print(bool(data['demandeTemperature']))
-    print("JALABAAAAAAJ------------------")
+    dataStr = {}
+    for dm in data:
+        out = False
+        if isinstance(data[dm], str):
+            if data[dm] == "true":
+                out = True
+            else:
+                out = False
+        else:
+            out = data[dm]
+        dataStr[dm] = out
 
-    demandeTemperature = bool(data['demandeTemperature'])
-    demandeAcoustique = bool(data['demandeAcoustique'])
-    demandeLuminosite = bool(data['demandeLuminosite'])
-    demandeCO2 = bool(data['demandeCO2'])
-    demandeHumidite = bool(data['demandeHumidite'])
+    demandeTemperature = bool(dataStr['demandeTemperature'])
+    demandeAcoustique = bool(dataStr['demandeAcoustique'])
+    demandeLuminosite = bool(dataStr['demandeLuminosite'])
+    demandeCO2 = bool(dataStr['demandeCO2'])
+    demandeHumidite = bool(dataStr['demandeHumidite'])
 
     if demandeTemperature == True and demandeAcoustique == True and demandeLuminosite == True and demandeCO2 == True and demandeHumidite == True and tooSoon == True:
 
