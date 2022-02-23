@@ -212,6 +212,12 @@ def indexMADM():
     if time.time() - 60 < lastMADM:
         tooSoon = True
 
+    print("JALABAAAAAAJ------------------")
+    print(data['demandeTemperature'])
+    print(type(data['demandeTemperature']))
+    print(bool(data['demandeTemperature']))
+    print("JALABAAAAAAJ------------------")
+
     demandeTemperature = bool(data['demandeTemperature'])
     demandeAcoustique = bool(data['demandeAcoustique'])
     demandeLuminosite = bool(data['demandeLuminosite'])
@@ -329,8 +335,10 @@ def indexMADM():
                                 FraicheurValeurs = r['Time']
                                 FraicheurValeurs = datetime.fromtimestamp(FraicheurValeurs / 1e3)
 
-                                #TODO: ce que romain à demander
-                                if (StatutTemperature == True and EtatCapteurs[j][0] == True and 'temperature' in r['capteur temperature'] and r['capteur temperature']['temperature']['temperature'] !="off"):
+                                # TODO: ce que romain à demander
+                                if (StatutTemperature == True and EtatCapteurs[j][0] == True and 'temperature' in r[
+                                    'capteur temperature'] and r['capteur temperature']['temperature'][
+                                    'temperature'] != "off"):
                                     ValeursTemperature.append(r['capteur temperature']['temperature']['temperature'])
                                 else:
                                     ValeursTemperature.append(None)
@@ -344,13 +352,15 @@ def indexMADM():
                                     ValeurNulle[1] = ValeurNulle[1] + 1
 
                                 if (StatutLuminosite == True and EtatCapteurs[j][2] == True and 'luminosite' in r[
-                                    'capteur luminosite'] and r['capteur luminosite']['luminosite']['luminosite'] != "off"):
+                                    'capteur luminosite'] and r['capteur luminosite']['luminosite'][
+                                    'luminosite'] != "off"):
                                     ValeursLuminosite.append(r['capteur luminosite']['luminosite']['luminosite'])
                                 else:
                                     ValeursLuminosite.append(None)
                                     ValeurNulle[2] = ValeurNulle[2] + 1
 
-                                if (StatutCO2 == True and EtatCapteurs[j][3] == True and 'co2' in r['capteur co2'] and r['capteur co2']['co2']['co2'] !="off"):
+                                if (StatutCO2 == True and EtatCapteurs[j][3] == True and 'co2' in r['capteur co2'] and
+                                        r['capteur co2']['co2']['co2'] != "off"):
                                     ValeursCO2.append(r['capteur co2']['co2']['co2'])
                                 else:
                                     ValeursCO2.append(None)
